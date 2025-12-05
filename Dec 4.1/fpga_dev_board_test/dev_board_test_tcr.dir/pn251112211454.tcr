@@ -1,0 +1,26 @@
+#Start recording tcl command: 11/12/2025 19:08:16
+#Project Location: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/dev_board_test.rdf"
+prj_remove_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/top.sv" "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv" "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench.sv" "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_sevseg.sv" "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/sevseg.sv" "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/pcm5102_sine.sv"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/upduin_v3_top.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/sine_wave_440hz.hex"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 11/12/2025 21:14:54

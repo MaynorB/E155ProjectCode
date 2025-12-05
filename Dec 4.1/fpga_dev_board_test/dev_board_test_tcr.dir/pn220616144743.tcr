@@ -1,0 +1,23 @@
+#Start recording tcl command: 6/2/2022 23:48:22
+#Project Location: Y:/dev/E155FA22/tutorials/dev_board_test; Project name: dev_board_test
+prj_create -name "dev_board_test" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "Y:/dev/E155FA22/tutorials/dev_board_test/source/impl_1/top.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "Y:/dev/E155FA22/tutorials/dev_board_test/pins.pdc"
+prj_enable_source "Y:/dev/E155FA22/tutorials/dev_board_test/pins.pdc"
+launch_programmer_prj "C:/lscc/radiant/3.1"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/3.1"
+launch_programmer_prj "C:/lscc/radiant/3.1"
+launch_programmer_prj "C:/lscc/radiant/3.1"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/3.1"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 6/16/2022 14:47:43

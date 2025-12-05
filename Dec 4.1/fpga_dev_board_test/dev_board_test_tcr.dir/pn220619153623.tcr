@@ -1,0 +1,36 @@
+#Start recording tcl command: 6/17/2022 13:44:33
+#Project Location: //Mac/Home/dev/E155FA22/tutorials/Development_Board_Test/fpga_dev_board_test; Project name: dev_board_test
+prj_open "//Mac/Home/dev/E155FA22/tutorials/Development_Board_Test/fpga_dev_board_test/dev_board_test.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/3.1"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/3.1"
+launch_programmer_prj "C:/lscc/radiant/3.1"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/3.1"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 6/19/2022 15:36:23

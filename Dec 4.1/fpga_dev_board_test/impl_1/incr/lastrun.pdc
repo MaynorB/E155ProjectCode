@@ -1,0 +1,26 @@
+
+# 2. DAC Outputs
+ldc_set_location -site {23} [get_ports dac_lrck_pin]
+ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports dac_lrck_pin]
+ldc_set_location -site {25} [get_ports dac_din_pin]
+ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports dac_din_pin]
+ldc_set_location -site {26} [get_ports dac_bclk_pin]
+ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports dac_bclk_pin]
+# 3. SPI Inputs
+ldc_set_location -site {28} [get_ports spi_mosi_pin]
+ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports spi_mosi_pin]
+ldc_set_location -site {38} [get_ports spi_sck_pin]
+ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports spi_sck_pin]
+# NEW: Chip Select on Pin 2
+ldc_set_location -site {2} [get_ports spi_cs_pin]
+ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports spi_cs_pin]
+ldc_set_location -site {42} [get_ports spi_cs_mix_pin]
+ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports spi_cs_mix_pin]
+# 4. Sync Input
+ldc_set_location -site {43} [get_ports clk_48k_pin]
+ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports clk_48k_pin]
+# 5. LEDs
+ldc_set_location -site {37} [get_ports led_pin]
+ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports led_pin]
+ldc_set_location -site {36} [get_ports led_fifo_empty_pin]
+ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports led_fifo_empty_pin]

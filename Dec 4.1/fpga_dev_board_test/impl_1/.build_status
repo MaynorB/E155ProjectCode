@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="2" build_time="1764857230">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1764857230"/>
+            <Task name="IBIS" build_result="0" update_result="2" update_time="1763004089"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1763004089"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1764857199">
+            <Task name="Map" build_result="2" update_result="0" update_time="1764857199"/>
+            <Task name="MapTrace" build_result="0" update_result="2" update_time="1763004089"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1764857218">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1764857218"/>
+            <Task name="PostParVM" build_result="0" update_result="2" update_time="1763004089"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1764857220"/>
+            <Task name="IOTiming" build_result="0" update_result="2" update_time="1763004089"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1764857193">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1764857193"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1764857220"/>
+            <Task name="LSE_Lint" build_result="0" update_result="2" update_time="1764854515"/>
+            <Task name="SynTrace" build_result="0" update_result="2" update_time="1764854515"/>
+            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1764854515"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="0" update_result="2" update_time="1763462631"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="1763462631"/>
+            <Task name="SSO" build_result="0" update_result="2" update_time="1763004089"/>
+            <Task name="PIODRC" build_result="0" update_result="2" update_time="1763004089"/>
+            <Task name="DEC" build_result="0" update_result="2" update_time="1763004089"/>
+        </Milestone>
+        <Report name="IBIS/dev_board_test_impl_1.ibs" last_build_time="1661380207" last_build_size="53896"/>
+        <Report name="dev_board_test_impl_1.bgn" last_build_time="1764857230" last_build_size="1213"/>
+        <Report name="dev_board_test_impl_1.bin" last_build_time="1764857230" last_build_size="104156"/>
+        <Report name="dev_board_test_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
+        <Report name="dev_board_test_impl_1.twr.html" last_build_time="1764857220" last_build_size="320562"/>
+        <Report name="dev_board_test_impl_1.udb" last_build_time="1764857218" last_build_size="96685"/>
+        <Report name="dev_board_test_impl_1_map.udb" last_build_time="1764857199" last_build_size="60173"/>
+        <Report name="dev_board_test_impl_1_rtl.udb" last_build_time="1764857192" last_build_size="39906"/>
+        <Report name="dev_board_test_impl_1_syn.udb" last_build_time="1764857193" last_build_size="38970"/>
+        <Report name="dev_board_test_impl_1_vo.sdf" last_build_time="1661380209" last_build_size="19616"/>
+        <Report name="dev_board_test_impl_1_vo.vo" last_build_time="1661380209" last_build_size="21352"/>
+    </Strategy>
+</BuildStatus>

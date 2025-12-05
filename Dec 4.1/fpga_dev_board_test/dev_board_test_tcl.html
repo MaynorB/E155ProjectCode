@@ -1,0 +1,684 @@
+<HTML>
+<HEAD>
+<TITLE>Lattice TCL Log</TITLE>
+<link href="file:///C:/lscc/radiant/2024.2/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///C:/lscc/radiant/2024.2/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="pn220616144743"></A><B><U><big>pn220616144743</big></U></B>
+#Start recording tcl command: 6/2/2022 23:48:22
+#Project Location: Y:/dev/E155FA22/tutorials/dev_board_test; Project name: dev_board_test
+prj_create -name "dev_board_test" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "Y:/dev/E155FA22/tutorials/dev_board_test/source/impl_1/top.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "Y:/dev/E155FA22/tutorials/dev_board_test/pins.pdc"
+prj_enable_source "Y:/dev/E155FA22/tutorials/dev_board_test/pins.pdc"
+launch_programmer_prj "C:/lscc/radiant/3.1"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/3.1"
+launch_programmer_prj "C:/lscc/radiant/3.1"
+launch_programmer_prj "C:/lscc/radiant/3.1"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/3.1"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 6/16/2022 14:47:43
+
+
+
+<A name="pn220619153623"></A><B><U><big>pn220619153623</big></U></B>
+#Start recording tcl command: 6/17/2022 13:44:33
+#Project Location: //Mac/Home/dev/E155FA22/tutorials/Development_Board_Test/fpga_dev_board_test; Project name: dev_board_test
+prj_open "//Mac/Home/dev/E155FA22/tutorials/Development_Board_Test/fpga_dev_board_test/dev_board_test.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/3.1"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/3.1"
+launch_programmer_prj "C:/lscc/radiant/3.1"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/3.1"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 6/19/2022 15:36:23
+
+
+
+<A name="pn250902221606"></A><B><U><big>pn250902221606</big></U></B>
+#Start recording tcl command: 9/2/2025 19:45:42
+#Project Location: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/dev_board_test.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_save 
+prj_close
+#Stop recording: 9/2/2025 22:16:06
+
+
+
+<A name="pn250903042441"></A><B><U><big>pn250903042441</big></U></B>
+#Start recording tcl command: 9/2/2025 22:20:24
+#Project Location: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/dev_board_test.rdf"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/lab1_co.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_remove_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/lab1_co.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/lab1_co.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/testbench.sv" -simulate_only
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/sim/sim.spf"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/sim/sim.spf"
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/sim1/sim1.spf"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/sim/sim.spf"
+#Stop recording: 9/3/2025 04:24:41
+
+
+
+<A name="pn250903164253"></A><B><U><big>pn250903164253</big></U></B>
+#Start recording tcl command: 9/3/2025 13:29:22
+#Project Location: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/dev_board_test.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_remove_source "C:/Users/COJEDADESILVA/Downloads/testbench.sv"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench.sv" -simulate_only
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/AIproject.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_remove_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/AIproject.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/3/2025 16:42:53
+
+
+
+<A name="pn250904213015"></A><B><U><big>pn250904213015</big></U></B>
+#Start recording tcl command: 9/4/2025 19:55:19
+#Project Location: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/dev_board_test.rdf"
+prj_run PAR -impl impl_1
+prj_disable_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/sim/sim.spf"
+prj_run Export -impl impl_1
+#Stop recording: 9/4/2025 21:30:15
+
+
+
+<A name="pn250912175934"></A><B><U><big>pn250912175934</big></U></B>
+#Start recording tcl command: 9/12/2025 15:43:33
+#Project Location: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/dev_board_test.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_sevseg.sv"
+prj_disable_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_sevseg.sv"
+prj_remove_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/lab1_co.sv"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/sevseg.sv"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv"
+prj_disable_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv"
+#Stop recording: 9/12/2025 17:59:34
+
+
+
+<A name="pn251112211454"></A><B><U><big>pn251112211454</big></U></B>
+#Start recording tcl command: 11/12/2025 19:08:16
+#Project Location: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/dev_board_test.rdf"
+prj_remove_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/top.sv" "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv" "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench.sv" "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_sevseg.sv" "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/sevseg.sv" "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/pcm5102_sine.sv"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/upduin_v3_top.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/sine_wave_440hz.hex"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 11/12/2025 21:14:54
+
+
+
+<A name="pn251118050143"></A><B><U><big>pn251118050143</big></U></B>
+#Start recording tcl command: 11/17/2025 21:31:01
+#Project Location: C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/dev_board_test.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/sine_wave_gen.sv"
+prj_add_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/sine_rom.sv"
+prj_run PAR -impl impl_1
+prj_disable_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/spi_sniffer.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/rate_synchronizer.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt -impl "impl_1" {top} {upduino_v3_top}
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_enable_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/spi_sniffer.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt -impl "impl_1" {top} {top}
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_remove_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/sync_fifo.sv"
+prj_remove_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/sine_wave_440hz.hex"
+prj_disable_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/sine_rom.sv"
+prj_disable_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/sine_wave_gen.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 11/18/2025 05:01:43
+
+
+
+<A name="pn251202021909"></A><B><U><big>pn251202021909</big></U></B>
+#Start recording tcl command: 12/1/2025 20:25:21
+#Project Location: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/dev_board_test.rdf"
+prj_remove_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/source/impl_1/spi_sniffer.sv"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/source/impl_1/fir_filter.sv"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/source/impl_1/mixer.sv"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/source/impl_1/spi_ctrl.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 12/2/2025 02:19:09
+
+
+
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#pn220616144743>pn220616144743</A></LI>
+<LI><A href=#pn220619153623>pn220619153623</A></LI>
+<LI><A href=#pn250902221606>pn250902221606</A></LI>
+<LI><A href=#pn250903042441>pn250903042441</A></LI>
+<LI><A href=#pn250903164253>pn250903164253</A></LI>
+<LI><A href=#pn250904213015>pn250904213015</A></LI>
+<LI><A href=#pn250912175934>pn250912175934</A></LI>
+<LI><A href=#pn251112211454>pn251112211454</A></LI>
+<LI><A href=#pn251118050143>pn251118050143</A></LI>
+<LI><A href=#pn251202021909>pn251202021909</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+

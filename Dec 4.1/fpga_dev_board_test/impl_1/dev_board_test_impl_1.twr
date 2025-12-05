@@ -1,0 +1,1799 @@
+Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2024.2.0.3.0
+
+Thu Dec  4 06:07:00 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt dev_board_test_impl_1.twr dev_board_test_impl_1.udb -gui -msgset C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/promote.xml
+
+-----------------------------------------
+Design:          top
+Family:          iCE40UP
+Device:          iCE40UP5K
+Package:         SG48
+Performance:     High-Performance_1.2V
+Package Status:                     Preliminary    Version 1.5
+**Performance Hardware Data Status :   Advanced Version 1.0
+-----------------------------------------
+
+
+=====================================================================
+                    Table of Contents
+=====================================================================
+    1  Timing Overview
+        1.1  SDC Constraints
+        1.2  Constraint Coverage
+        1.3  Overall Summary
+        1.4  Unconstrained Report
+        1.5  Combinational Loop
+    2  Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees
+        2.1  Clock Summary
+        2.2  Endpoint slacks
+        2.3  Detailed Report
+    3  Hold at Speed Grade m Corner at -40 Degrees
+        3.1  Endpoint slacks
+        3.2  Detailed Report
+
+=====================================================================
+                    End of Table of Contents
+=====================================================================
+
+==============================================
+1  Timing Overview
+==============================================
+
+1.1  SDC Constraints
+=====================
+create_clock -name {clk_48mhz} -period 20.8333 [get_pins {hf_osc.osc_inst/CLKHF }] 
+
+1.2  Constraint Coverage
+---------------------------
+Constraint Coverage: 90.649%
+
+
+1.3  Overall Summary
+---------------------------
+ Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees     Timing Errors: 49 endpoints;  Total Negative Slack: 375.176 ns 
+ Hold at Speed Grade m Corner at -40 Degrees                          Timing Errors: 0 endpoints;  Total Negative Slack: 0.000 ns 
+
+1.4  Unconstrained Report
+===========================
+
+1.4.1  Unconstrained Start/End Points
+--------------------------------------
+
+Clocked but unconstrained timing start points
+-------------------------------------------------------------------
+        Listing 10 Start Points         |           Type           
+-------------------------------------------------------------------
+i_mixer/mixed_out_i0/Q                  |          No required time
+i_mixer/mixed_out_i1/Q                  |          No required time
+i_mixer/mixed_out_i2/Q                  |          No required time
+i_mixer/mixed_out_i3/Q                  |          No required time
+i_mixer/mixed_out_i4/Q                  |          No required time
+i_mixer/mixed_out_i5/Q                  |          No required time
+i_mixer/mixed_out_i6/Q                  |          No required time
+i_mixer/mixed_out_i7/Q                  |          No required time
+i_mixer/mixed_out_i8/Q                  |          No required time
+i_mixer/mixed_out_i9/Q                  |          No required time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing start po |                          
+ints                                    |                        16
+                                        |                          
+-------------------------------------------------------------------
+
+Clocked but unconstrained timing end points
+-------------------------------------------------------------------
+          Listing 5 End Points          |           Type           
+-------------------------------------------------------------------
+i_sync/mcu_clk_sync_i0/PADDI            |           No arrival time
+i_spi/mosi_sync_i0/PADDI                |           No arrival time
+i_spi/sck_sync_i0/PADDI                 |           No arrival time
+i_spi/cs_sync_i0/PADDI                  |           No arrival time
+i_mixer_ctrl/cs_sync_i0/PADDI           |           No arrival time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing end poin |                          
+ts                                      |                         5
+                                        |                          
+-------------------------------------------------------------------
+
+1.4.2  Start/End Points Without Timing Constraints
+---------------------------------------------------
+
+I/O ports without constraint
+----------------------------
+Possible constraints to use on I/O ports are:
+set_input_delay,
+set_output_delay,
+set_max_delay,
+create_clock,
+create_generated_clock,
+...
+
+-------------------------------------------------------------------
+     Listing 8 Start or End Points      |           Type           
+-------------------------------------------------------------------
+spi_cs_pin                              |                     input
+spi_mosi_pin                            |                     input
+spi_sck_pin                             |                     input
+spi_cs_mix_pin                          |                     input
+clk_48k_pin                             |                     input
+dac_lrck_pin                            |                    output
+dac_bclk_pin                            |                    output
+dac_din_pin                             |                    output
+-------------------------------------------------------------------
+                                        |                          
+Number of I/O ports without constraint  |                         8
+                                        |                          
+-------------------------------------------------------------------
+
+Nets without clock definition
+Define a clock on a top level port or a generated clock on a clock divider pin associated with this net(s).
+-------------------------------------------------------------------
+            Listing 1 Net(s)            |        Source pin        
+-------------------------------------------------------------------
+dac_bclk_pin_c                          |i_player/clk_div_288__i3/Q
+-------------------------------------------------------------------
+                                        |                          
+Number of clock nets without clock defi |                          
+nition                                  |                         1
+                                        |                          
+-------------------------------------------------------------------
+
+
+1.5  Combinational Loop
+========================
+None
+
+===============================================================
+2  Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees
+===============================================================
+
+2.1  Clock Summary
+=======================
+
+2.1.1 Clock "clk_48mhz"
+=======================
+create_clock -name {clk_48mhz} -period 20.8333 [get_pins {hf_osc.osc_inst/CLKHF }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+            Clock clk_48mhz             |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From clk_48mhz                         |             Target |          20.833 ns |         48.000 MHz 
+                                        | Actual (all paths) |          32.624 ns |         30.652 MHz 
+hf_osc.osc_inst/CLKHF (MPW)             |   (50% duty cycle) |          20.792 ns |         48.095 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+
+2.2  Endpoint slacks
+=======================
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+i_mixer/mixed_sum_res1_e1_i0_i29/D       |  -11.792 ns 
+i_mixer/mixed_sum_res1_e1_i0_i28/D       |  -11.515 ns 
+i_mixer/mixed_sum_res1_e1_i0_i27/D       |  -11.238 ns 
+i_mixer/mixed_sum_res1_e1_i0_i26/D       |  -10.961 ns 
+i_mixer/mixed_sum_res1_e1_i0_i25/D       |  -10.684 ns 
+i_mixer/mixed_sum_res1_e1_i0_i24/D       |  -10.407 ns 
+i_mixer/mixed_sum_res1_e2__i20/D         |   -9.842 ns 
+i_mixer/mixed_sum_res1_e2__i24/D         |   -9.836 ns 
+i_mixer/mixed_sum_res1_e2__i23/D         |   -9.729 ns 
+i_mixer/mixed_sum_res1_e2__i25/D         |   -9.699 ns 
+-------------------------------------------------------
+                                         |             
+Setup # of endpoints with negative slack:|          49 
+                                         |             
+-------------------------------------------------------
+
+2.3  Detailed Report
+=======================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : i_filter/data_out__i1/Q  (SLICE_R10C21D)
+Path End         : i_mixer/mixed_sum_res1_e1_i0_i29/D  (SLICE_R2C19C)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 21
+Delay Ratio      : 47.0% (route), 53.0% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : -11.791 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                  5.499  238     
+{i_filter/data_out__i0/CK   i_filter/data_out__i1/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+i_filter/data_out__i1/CK->i_filter/data_out__i1/Q
+                                          SLICE_R10C21D      CLK_TO_Q1_DELAY         1.388                  6.887  2       
+i_filter/bass_sample[1]                                      NET DELAY               4.573                 11.460  2       
+i_mixer/mult_12/A1->i_mixer/mult_12/O7    DSP_DSP_R1C11      A_TO_O_DELAY            3.699                 15.159  1       
+i_mixer/n126[7]                                              NET DELAY               3.965                 19.124  1       
+i_mixer/mult_526/A7->i_mixer/mult_526/O12
+                                          DSP_DSP_R1C6       A_TO_O_DELAY            6.836                 25.960  1       
+i_mixer/n863[12]                                             NET DELAY               4.944                 30.904  1       
+i_mixer/add_527_add_5_5/C0->i_mixer/add_527_add_5_5/CO0
+                                          SLICE_R2C17C       C0_TO_COUT0_DELAY       0.343                 31.247  2       
+i_mixer/n6671                                                NET DELAY               0.000                 31.247  2       
+i_mixer/add_527_add_5_5/CI1->i_mixer/add_527_add_5_5/CO1
+                                          SLICE_R2C17C       CIN1_TO_COUT1_DELAY     0.277                 31.524  2       
+i_mixer/n3918                                                NET DELAY               0.000                 31.524  2       
+i_mixer/add_527_add_5_7/CI0->i_mixer/add_527_add_5_7/CO0
+                                          SLICE_R2C17D       CIN0_TO_COUT0_DELAY     0.277                 31.801  2       
+i_mixer/n6674                                                NET DELAY               0.000                 31.801  2       
+i_mixer/add_527_add_5_7/CI1->i_mixer/add_527_add_5_7/CO1
+                                          SLICE_R2C17D       CIN1_TO_COUT1_DELAY     0.277                 32.078  2       
+i_mixer/n3920                                                NET DELAY               0.555                 32.633  2       
+i_mixer/add_527_add_5_9/CI0->i_mixer/add_527_add_5_9/CO0
+                                          SLICE_R2C18A       CIN0_TO_COUT0_DELAY     0.277                 32.910  2       
+i_mixer/n6677                                                NET DELAY               0.000                 32.910  2       
+i_mixer/add_527_add_5_9/CI1->i_mixer/add_527_add_5_9/CO1
+                                          SLICE_R2C18A       CIN1_TO_COUT1_DELAY     0.277                 33.187  2       
+i_mixer/n3922                                                NET DELAY               0.000                 33.187  2       
+i_mixer/add_527_add_5_11/CI0->i_mixer/add_527_add_5_11/CO0
+                                          SLICE_R2C18B       CIN0_TO_COUT0_DELAY     0.277                 33.464  2       
+i_mixer/n6680                                                NET DELAY               0.000                 33.464  2       
+i_mixer/add_527_add_5_11/CI1->i_mixer/add_527_add_5_11/CO1
+                                          SLICE_R2C18B       CIN1_TO_COUT1_DELAY     0.277                 33.741  2       
+i_mixer/n3924                                                NET DELAY               0.000                 33.741  2       
+i_mixer/add_527_add_5_13/CI0->i_mixer/add_527_add_5_13/CO0
+                                          SLICE_R2C18C       CIN0_TO_COUT0_DELAY     0.277                 34.018  2       
+i_mixer/n6683                                                NET DELAY               0.000                 34.018  2       
+i_mixer/add_527_add_5_13/CI1->i_mixer/add_527_add_5_13/CO1
+                                          SLICE_R2C18C       CIN1_TO_COUT1_DELAY     0.277                 34.295  2       
+i_mixer/n3926                                                NET DELAY               0.000                 34.295  2       
+i_mixer/add_527_add_5_15/CI0->i_mixer/add_527_add_5_15/CO0
+                                          SLICE_R2C18D       CIN0_TO_COUT0_DELAY     0.277                 34.572  2       
+i_mixer/n6686                                                NET DELAY               0.000                 34.572  2       
+i_mixer/add_527_add_5_15/CI1->i_mixer/add_527_add_5_15/CO1
+                                          SLICE_R2C18D       CIN1_TO_COUT1_DELAY     0.277                 34.849  2       
+i_mixer/n3928                                                NET DELAY               0.555                 35.404  2       
+i_mixer/add_527_add_5_17/CI0->i_mixer/add_527_add_5_17/CO0
+                                          SLICE_R2C19A       CIN0_TO_COUT0_DELAY     0.277                 35.681  2       
+i_mixer/n6689                                                NET DELAY               0.000                 35.681  2       
+i_mixer/add_527_add_5_17/CI1->i_mixer/add_527_add_5_17/CO1
+                                          SLICE_R2C19A       CIN1_TO_COUT1_DELAY     0.277                 35.958  2       
+i_mixer/n3930                                                NET DELAY               0.000                 35.958  2       
+i_mixer/add_527_add_5_19/CI0->i_mixer/add_527_add_5_19/CO0
+                                          SLICE_R2C19B       CIN0_TO_COUT0_DELAY     0.277                 36.235  2       
+i_mixer/n6692                                                NET DELAY               0.000                 36.235  2       
+i_mixer/add_527_add_5_19/CI1->i_mixer/add_527_add_5_19/CO1
+                                          SLICE_R2C19B       CIN1_TO_COUT1_DELAY     0.277                 36.512  2       
+i_mixer/n3932                                                NET DELAY               0.000                 36.512  2       
+i_mixer/add_527_add_5_21/CI0->i_mixer/add_527_add_5_21/CO0
+                                          SLICE_R2C19C       CIN0_TO_COUT0_DELAY     0.277                 36.789  2       
+i_mixer/n6695                                                NET DELAY               0.661                 37.450  2       
+i_mixer/add_527_add_5_21/D1->i_mixer/add_527_add_5_21/S1
+                                          SLICE_R2C19C       D1_TO_F1_DELAY          0.476                 37.926  1       
+i_mixer/n157[29]                                             NET DELAY               0.000                 37.926  1       
+i_mixer/mixed_sum_res1_e1_i0_i29/D                           ENDPOINT                0.000                 37.926  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                 26.332  238     
+{i_mixer/mixed_sum_res1_e1_i0_i28/CK   i_mixer/mixed_sum_res1_e1_i0_i29/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(37.925)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                      -11.791  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_filter/data_out__i1/Q  (SLICE_R10C21D)
+Path End         : i_mixer/mixed_sum_res1_e1_i0_i28/D  (SLICE_R2C19C)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 20
+Delay Ratio      : 47.4% (route), 52.6% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : -11.514 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                  5.499  238     
+{i_filter/data_out__i0/CK   i_filter/data_out__i1/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+i_filter/data_out__i1/CK->i_filter/data_out__i1/Q
+                                          SLICE_R10C21D      CLK_TO_Q1_DELAY         1.388                  6.887  2       
+i_filter/bass_sample[1]                                      NET DELAY               4.573                 11.460  2       
+i_mixer/mult_12/A1->i_mixer/mult_12/O7    DSP_DSP_R1C11      A_TO_O_DELAY            3.699                 15.159  1       
+i_mixer/n126[7]                                              NET DELAY               3.965                 19.124  1       
+i_mixer/mult_526/A7->i_mixer/mult_526/O12
+                                          DSP_DSP_R1C6       A_TO_O_DELAY            6.836                 25.960  1       
+i_mixer/n863[12]                                             NET DELAY               4.944                 30.904  1       
+i_mixer/add_527_add_5_5/C0->i_mixer/add_527_add_5_5/CO0
+                                          SLICE_R2C17C       C0_TO_COUT0_DELAY       0.343                 31.247  2       
+i_mixer/n6671                                                NET DELAY               0.000                 31.247  2       
+i_mixer/add_527_add_5_5/CI1->i_mixer/add_527_add_5_5/CO1
+                                          SLICE_R2C17C       CIN1_TO_COUT1_DELAY     0.277                 31.524  2       
+i_mixer/n3918                                                NET DELAY               0.000                 31.524  2       
+i_mixer/add_527_add_5_7/CI0->i_mixer/add_527_add_5_7/CO0
+                                          SLICE_R2C17D       CIN0_TO_COUT0_DELAY     0.277                 31.801  2       
+i_mixer/n6674                                                NET DELAY               0.000                 31.801  2       
+i_mixer/add_527_add_5_7/CI1->i_mixer/add_527_add_5_7/CO1
+                                          SLICE_R2C17D       CIN1_TO_COUT1_DELAY     0.277                 32.078  2       
+i_mixer/n3920                                                NET DELAY               0.555                 32.633  2       
+i_mixer/add_527_add_5_9/CI0->i_mixer/add_527_add_5_9/CO0
+                                          SLICE_R2C18A       CIN0_TO_COUT0_DELAY     0.277                 32.910  2       
+i_mixer/n6677                                                NET DELAY               0.000                 32.910  2       
+i_mixer/add_527_add_5_9/CI1->i_mixer/add_527_add_5_9/CO1
+                                          SLICE_R2C18A       CIN1_TO_COUT1_DELAY     0.277                 33.187  2       
+i_mixer/n3922                                                NET DELAY               0.000                 33.187  2       
+i_mixer/add_527_add_5_11/CI0->i_mixer/add_527_add_5_11/CO0
+                                          SLICE_R2C18B       CIN0_TO_COUT0_DELAY     0.277                 33.464  2       
+i_mixer/n6680                                                NET DELAY               0.000                 33.464  2       
+i_mixer/add_527_add_5_11/CI1->i_mixer/add_527_add_5_11/CO1
+                                          SLICE_R2C18B       CIN1_TO_COUT1_DELAY     0.277                 33.741  2       
+i_mixer/n3924                                                NET DELAY               0.000                 33.741  2       
+i_mixer/add_527_add_5_13/CI0->i_mixer/add_527_add_5_13/CO0
+                                          SLICE_R2C18C       CIN0_TO_COUT0_DELAY     0.277                 34.018  2       
+i_mixer/n6683                                                NET DELAY               0.000                 34.018  2       
+i_mixer/add_527_add_5_13/CI1->i_mixer/add_527_add_5_13/CO1
+                                          SLICE_R2C18C       CIN1_TO_COUT1_DELAY     0.277                 34.295  2       
+i_mixer/n3926                                                NET DELAY               0.000                 34.295  2       
+i_mixer/add_527_add_5_15/CI0->i_mixer/add_527_add_5_15/CO0
+                                          SLICE_R2C18D       CIN0_TO_COUT0_DELAY     0.277                 34.572  2       
+i_mixer/n6686                                                NET DELAY               0.000                 34.572  2       
+i_mixer/add_527_add_5_15/CI1->i_mixer/add_527_add_5_15/CO1
+                                          SLICE_R2C18D       CIN1_TO_COUT1_DELAY     0.277                 34.849  2       
+i_mixer/n3928                                                NET DELAY               0.555                 35.404  2       
+i_mixer/add_527_add_5_17/CI0->i_mixer/add_527_add_5_17/CO0
+                                          SLICE_R2C19A       CIN0_TO_COUT0_DELAY     0.277                 35.681  2       
+i_mixer/n6689                                                NET DELAY               0.000                 35.681  2       
+i_mixer/add_527_add_5_17/CI1->i_mixer/add_527_add_5_17/CO1
+                                          SLICE_R2C19A       CIN1_TO_COUT1_DELAY     0.277                 35.958  2       
+i_mixer/n3930                                                NET DELAY               0.000                 35.958  2       
+i_mixer/add_527_add_5_19/CI0->i_mixer/add_527_add_5_19/CO0
+                                          SLICE_R2C19B       CIN0_TO_COUT0_DELAY     0.277                 36.235  2       
+i_mixer/n6692                                                NET DELAY               0.000                 36.235  2       
+i_mixer/add_527_add_5_19/CI1->i_mixer/add_527_add_5_19/CO1
+                                          SLICE_R2C19B       CIN1_TO_COUT1_DELAY     0.277                 36.512  2       
+i_mixer/n3932                                                NET DELAY               0.661                 37.173  2       
+i_mixer/add_527_add_5_21/D0->i_mixer/add_527_add_5_21/S0
+                                          SLICE_R2C19C       D0_TO_F0_DELAY          0.476                 37.649  1       
+i_mixer/n157[28]                                             NET DELAY               0.000                 37.649  1       
+i_mixer/mixed_sum_res1_e1_i0_i28/D                           ENDPOINT                0.000                 37.649  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                 26.332  238     
+{i_mixer/mixed_sum_res1_e1_i0_i28/CK   i_mixer/mixed_sum_res1_e1_i0_i29/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(37.648)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                      -11.514  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_filter/data_out__i1/Q  (SLICE_R10C21D)
+Path End         : i_mixer/mixed_sum_res1_e1_i0_i27/D  (SLICE_R2C19B)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 19
+Delay Ratio      : 47.9% (route), 52.1% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : -11.237 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                  5.499  238     
+{i_filter/data_out__i0/CK   i_filter/data_out__i1/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+i_filter/data_out__i1/CK->i_filter/data_out__i1/Q
+                                          SLICE_R10C21D      CLK_TO_Q1_DELAY         1.388                  6.887  2       
+i_filter/bass_sample[1]                                      NET DELAY               4.573                 11.460  2       
+i_mixer/mult_12/A1->i_mixer/mult_12/O7    DSP_DSP_R1C11      A_TO_O_DELAY            3.699                 15.159  1       
+i_mixer/n126[7]                                              NET DELAY               3.965                 19.124  1       
+i_mixer/mult_526/A7->i_mixer/mult_526/O12
+                                          DSP_DSP_R1C6       A_TO_O_DELAY            6.836                 25.960  1       
+i_mixer/n863[12]                                             NET DELAY               4.944                 30.904  1       
+i_mixer/add_527_add_5_5/C0->i_mixer/add_527_add_5_5/CO0
+                                          SLICE_R2C17C       C0_TO_COUT0_DELAY       0.343                 31.247  2       
+i_mixer/n6671                                                NET DELAY               0.000                 31.247  2       
+i_mixer/add_527_add_5_5/CI1->i_mixer/add_527_add_5_5/CO1
+                                          SLICE_R2C17C       CIN1_TO_COUT1_DELAY     0.277                 31.524  2       
+i_mixer/n3918                                                NET DELAY               0.000                 31.524  2       
+i_mixer/add_527_add_5_7/CI0->i_mixer/add_527_add_5_7/CO0
+                                          SLICE_R2C17D       CIN0_TO_COUT0_DELAY     0.277                 31.801  2       
+i_mixer/n6674                                                NET DELAY               0.000                 31.801  2       
+i_mixer/add_527_add_5_7/CI1->i_mixer/add_527_add_5_7/CO1
+                                          SLICE_R2C17D       CIN1_TO_COUT1_DELAY     0.277                 32.078  2       
+i_mixer/n3920                                                NET DELAY               0.555                 32.633  2       
+i_mixer/add_527_add_5_9/CI0->i_mixer/add_527_add_5_9/CO0
+                                          SLICE_R2C18A       CIN0_TO_COUT0_DELAY     0.277                 32.910  2       
+i_mixer/n6677                                                NET DELAY               0.000                 32.910  2       
+i_mixer/add_527_add_5_9/CI1->i_mixer/add_527_add_5_9/CO1
+                                          SLICE_R2C18A       CIN1_TO_COUT1_DELAY     0.277                 33.187  2       
+i_mixer/n3922                                                NET DELAY               0.000                 33.187  2       
+i_mixer/add_527_add_5_11/CI0->i_mixer/add_527_add_5_11/CO0
+                                          SLICE_R2C18B       CIN0_TO_COUT0_DELAY     0.277                 33.464  2       
+i_mixer/n6680                                                NET DELAY               0.000                 33.464  2       
+i_mixer/add_527_add_5_11/CI1->i_mixer/add_527_add_5_11/CO1
+                                          SLICE_R2C18B       CIN1_TO_COUT1_DELAY     0.277                 33.741  2       
+i_mixer/n3924                                                NET DELAY               0.000                 33.741  2       
+i_mixer/add_527_add_5_13/CI0->i_mixer/add_527_add_5_13/CO0
+                                          SLICE_R2C18C       CIN0_TO_COUT0_DELAY     0.277                 34.018  2       
+i_mixer/n6683                                                NET DELAY               0.000                 34.018  2       
+i_mixer/add_527_add_5_13/CI1->i_mixer/add_527_add_5_13/CO1
+                                          SLICE_R2C18C       CIN1_TO_COUT1_DELAY     0.277                 34.295  2       
+i_mixer/n3926                                                NET DELAY               0.000                 34.295  2       
+i_mixer/add_527_add_5_15/CI0->i_mixer/add_527_add_5_15/CO0
+                                          SLICE_R2C18D       CIN0_TO_COUT0_DELAY     0.277                 34.572  2       
+i_mixer/n6686                                                NET DELAY               0.000                 34.572  2       
+i_mixer/add_527_add_5_15/CI1->i_mixer/add_527_add_5_15/CO1
+                                          SLICE_R2C18D       CIN1_TO_COUT1_DELAY     0.277                 34.849  2       
+i_mixer/n3928                                                NET DELAY               0.555                 35.404  2       
+i_mixer/add_527_add_5_17/CI0->i_mixer/add_527_add_5_17/CO0
+                                          SLICE_R2C19A       CIN0_TO_COUT0_DELAY     0.277                 35.681  2       
+i_mixer/n6689                                                NET DELAY               0.000                 35.681  2       
+i_mixer/add_527_add_5_17/CI1->i_mixer/add_527_add_5_17/CO1
+                                          SLICE_R2C19A       CIN1_TO_COUT1_DELAY     0.277                 35.958  2       
+i_mixer/n3930                                                NET DELAY               0.000                 35.958  2       
+i_mixer/add_527_add_5_19/CI0->i_mixer/add_527_add_5_19/CO0
+                                          SLICE_R2C19B       CIN0_TO_COUT0_DELAY     0.277                 36.235  2       
+i_mixer/n6692                                                NET DELAY               0.661                 36.896  2       
+i_mixer/add_527_add_5_19/D1->i_mixer/add_527_add_5_19/S1
+                                          SLICE_R2C19B       D1_TO_F1_DELAY          0.476                 37.372  1       
+i_mixer/n157[27]                                             NET DELAY               0.000                 37.372  1       
+i_mixer/mixed_sum_res1_e1_i0_i27/D                           ENDPOINT                0.000                 37.372  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                 26.332  238     
+{i_mixer/mixed_sum_res1_e1_i0_i26/CK   i_mixer/mixed_sum_res1_e1_i0_i27/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(37.371)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                      -11.237  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_filter/data_out__i1/Q  (SLICE_R10C21D)
+Path End         : i_mixer/mixed_sum_res1_e1_i0_i26/D  (SLICE_R2C19B)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 18
+Delay Ratio      : 48.3% (route), 51.7% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : -10.960 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                  5.499  238     
+{i_filter/data_out__i0/CK   i_filter/data_out__i1/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+i_filter/data_out__i1/CK->i_filter/data_out__i1/Q
+                                          SLICE_R10C21D      CLK_TO_Q1_DELAY         1.388                  6.887  2       
+i_filter/bass_sample[1]                                      NET DELAY               4.573                 11.460  2       
+i_mixer/mult_12/A1->i_mixer/mult_12/O7    DSP_DSP_R1C11      A_TO_O_DELAY            3.699                 15.159  1       
+i_mixer/n126[7]                                              NET DELAY               3.965                 19.124  1       
+i_mixer/mult_526/A7->i_mixer/mult_526/O12
+                                          DSP_DSP_R1C6       A_TO_O_DELAY            6.836                 25.960  1       
+i_mixer/n863[12]                                             NET DELAY               4.944                 30.904  1       
+i_mixer/add_527_add_5_5/C0->i_mixer/add_527_add_5_5/CO0
+                                          SLICE_R2C17C       C0_TO_COUT0_DELAY       0.343                 31.247  2       
+i_mixer/n6671                                                NET DELAY               0.000                 31.247  2       
+i_mixer/add_527_add_5_5/CI1->i_mixer/add_527_add_5_5/CO1
+                                          SLICE_R2C17C       CIN1_TO_COUT1_DELAY     0.277                 31.524  2       
+i_mixer/n3918                                                NET DELAY               0.000                 31.524  2       
+i_mixer/add_527_add_5_7/CI0->i_mixer/add_527_add_5_7/CO0
+                                          SLICE_R2C17D       CIN0_TO_COUT0_DELAY     0.277                 31.801  2       
+i_mixer/n6674                                                NET DELAY               0.000                 31.801  2       
+i_mixer/add_527_add_5_7/CI1->i_mixer/add_527_add_5_7/CO1
+                                          SLICE_R2C17D       CIN1_TO_COUT1_DELAY     0.277                 32.078  2       
+i_mixer/n3920                                                NET DELAY               0.555                 32.633  2       
+i_mixer/add_527_add_5_9/CI0->i_mixer/add_527_add_5_9/CO0
+                                          SLICE_R2C18A       CIN0_TO_COUT0_DELAY     0.277                 32.910  2       
+i_mixer/n6677                                                NET DELAY               0.000                 32.910  2       
+i_mixer/add_527_add_5_9/CI1->i_mixer/add_527_add_5_9/CO1
+                                          SLICE_R2C18A       CIN1_TO_COUT1_DELAY     0.277                 33.187  2       
+i_mixer/n3922                                                NET DELAY               0.000                 33.187  2       
+i_mixer/add_527_add_5_11/CI0->i_mixer/add_527_add_5_11/CO0
+                                          SLICE_R2C18B       CIN0_TO_COUT0_DELAY     0.277                 33.464  2       
+i_mixer/n6680                                                NET DELAY               0.000                 33.464  2       
+i_mixer/add_527_add_5_11/CI1->i_mixer/add_527_add_5_11/CO1
+                                          SLICE_R2C18B       CIN1_TO_COUT1_DELAY     0.277                 33.741  2       
+i_mixer/n3924                                                NET DELAY               0.000                 33.741  2       
+i_mixer/add_527_add_5_13/CI0->i_mixer/add_527_add_5_13/CO0
+                                          SLICE_R2C18C       CIN0_TO_COUT0_DELAY     0.277                 34.018  2       
+i_mixer/n6683                                                NET DELAY               0.000                 34.018  2       
+i_mixer/add_527_add_5_13/CI1->i_mixer/add_527_add_5_13/CO1
+                                          SLICE_R2C18C       CIN1_TO_COUT1_DELAY     0.277                 34.295  2       
+i_mixer/n3926                                                NET DELAY               0.000                 34.295  2       
+i_mixer/add_527_add_5_15/CI0->i_mixer/add_527_add_5_15/CO0
+                                          SLICE_R2C18D       CIN0_TO_COUT0_DELAY     0.277                 34.572  2       
+i_mixer/n6686                                                NET DELAY               0.000                 34.572  2       
+i_mixer/add_527_add_5_15/CI1->i_mixer/add_527_add_5_15/CO1
+                                          SLICE_R2C18D       CIN1_TO_COUT1_DELAY     0.277                 34.849  2       
+i_mixer/n3928                                                NET DELAY               0.555                 35.404  2       
+i_mixer/add_527_add_5_17/CI0->i_mixer/add_527_add_5_17/CO0
+                                          SLICE_R2C19A       CIN0_TO_COUT0_DELAY     0.277                 35.681  2       
+i_mixer/n6689                                                NET DELAY               0.000                 35.681  2       
+i_mixer/add_527_add_5_17/CI1->i_mixer/add_527_add_5_17/CO1
+                                          SLICE_R2C19A       CIN1_TO_COUT1_DELAY     0.277                 35.958  2       
+i_mixer/n3930                                                NET DELAY               0.661                 36.619  2       
+i_mixer/add_527_add_5_19/D0->i_mixer/add_527_add_5_19/S0
+                                          SLICE_R2C19B       D0_TO_F0_DELAY          0.476                 37.095  1       
+i_mixer/n157[26]                                             NET DELAY               0.000                 37.095  1       
+i_mixer/mixed_sum_res1_e1_i0_i26/D                           ENDPOINT                0.000                 37.095  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                 26.332  238     
+{i_mixer/mixed_sum_res1_e1_i0_i26/CK   i_mixer/mixed_sum_res1_e1_i0_i27/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(37.094)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                      -10.960  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_filter/data_out__i1/Q  (SLICE_R10C21D)
+Path End         : i_mixer/mixed_sum_res1_e1_i0_i25/D  (SLICE_R2C19A)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 17
+Delay Ratio      : 48.7% (route), 51.3% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : -10.683 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                  5.499  238     
+{i_filter/data_out__i0/CK   i_filter/data_out__i1/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+i_filter/data_out__i1/CK->i_filter/data_out__i1/Q
+                                          SLICE_R10C21D      CLK_TO_Q1_DELAY         1.388                  6.887  2       
+i_filter/bass_sample[1]                                      NET DELAY               4.573                 11.460  2       
+i_mixer/mult_12/A1->i_mixer/mult_12/O7    DSP_DSP_R1C11      A_TO_O_DELAY            3.699                 15.159  1       
+i_mixer/n126[7]                                              NET DELAY               3.965                 19.124  1       
+i_mixer/mult_526/A7->i_mixer/mult_526/O12
+                                          DSP_DSP_R1C6       A_TO_O_DELAY            6.836                 25.960  1       
+i_mixer/n863[12]                                             NET DELAY               4.944                 30.904  1       
+i_mixer/add_527_add_5_5/C0->i_mixer/add_527_add_5_5/CO0
+                                          SLICE_R2C17C       C0_TO_COUT0_DELAY       0.343                 31.247  2       
+i_mixer/n6671                                                NET DELAY               0.000                 31.247  2       
+i_mixer/add_527_add_5_5/CI1->i_mixer/add_527_add_5_5/CO1
+                                          SLICE_R2C17C       CIN1_TO_COUT1_DELAY     0.277                 31.524  2       
+i_mixer/n3918                                                NET DELAY               0.000                 31.524  2       
+i_mixer/add_527_add_5_7/CI0->i_mixer/add_527_add_5_7/CO0
+                                          SLICE_R2C17D       CIN0_TO_COUT0_DELAY     0.277                 31.801  2       
+i_mixer/n6674                                                NET DELAY               0.000                 31.801  2       
+i_mixer/add_527_add_5_7/CI1->i_mixer/add_527_add_5_7/CO1
+                                          SLICE_R2C17D       CIN1_TO_COUT1_DELAY     0.277                 32.078  2       
+i_mixer/n3920                                                NET DELAY               0.555                 32.633  2       
+i_mixer/add_527_add_5_9/CI0->i_mixer/add_527_add_5_9/CO0
+                                          SLICE_R2C18A       CIN0_TO_COUT0_DELAY     0.277                 32.910  2       
+i_mixer/n6677                                                NET DELAY               0.000                 32.910  2       
+i_mixer/add_527_add_5_9/CI1->i_mixer/add_527_add_5_9/CO1
+                                          SLICE_R2C18A       CIN1_TO_COUT1_DELAY     0.277                 33.187  2       
+i_mixer/n3922                                                NET DELAY               0.000                 33.187  2       
+i_mixer/add_527_add_5_11/CI0->i_mixer/add_527_add_5_11/CO0
+                                          SLICE_R2C18B       CIN0_TO_COUT0_DELAY     0.277                 33.464  2       
+i_mixer/n6680                                                NET DELAY               0.000                 33.464  2       
+i_mixer/add_527_add_5_11/CI1->i_mixer/add_527_add_5_11/CO1
+                                          SLICE_R2C18B       CIN1_TO_COUT1_DELAY     0.277                 33.741  2       
+i_mixer/n3924                                                NET DELAY               0.000                 33.741  2       
+i_mixer/add_527_add_5_13/CI0->i_mixer/add_527_add_5_13/CO0
+                                          SLICE_R2C18C       CIN0_TO_COUT0_DELAY     0.277                 34.018  2       
+i_mixer/n6683                                                NET DELAY               0.000                 34.018  2       
+i_mixer/add_527_add_5_13/CI1->i_mixer/add_527_add_5_13/CO1
+                                          SLICE_R2C18C       CIN1_TO_COUT1_DELAY     0.277                 34.295  2       
+i_mixer/n3926                                                NET DELAY               0.000                 34.295  2       
+i_mixer/add_527_add_5_15/CI0->i_mixer/add_527_add_5_15/CO0
+                                          SLICE_R2C18D       CIN0_TO_COUT0_DELAY     0.277                 34.572  2       
+i_mixer/n6686                                                NET DELAY               0.000                 34.572  2       
+i_mixer/add_527_add_5_15/CI1->i_mixer/add_527_add_5_15/CO1
+                                          SLICE_R2C18D       CIN1_TO_COUT1_DELAY     0.277                 34.849  2       
+i_mixer/n3928                                                NET DELAY               0.555                 35.404  2       
+i_mixer/add_527_add_5_17/CI0->i_mixer/add_527_add_5_17/CO0
+                                          SLICE_R2C19A       CIN0_TO_COUT0_DELAY     0.277                 35.681  2       
+i_mixer/n6689                                                NET DELAY               0.661                 36.342  2       
+i_mixer/add_527_add_5_17/D1->i_mixer/add_527_add_5_17/S1
+                                          SLICE_R2C19A       D1_TO_F1_DELAY          0.476                 36.818  1       
+i_mixer/n157[25]                                             NET DELAY               0.000                 36.818  1       
+i_mixer/mixed_sum_res1_e1_i0_i25/D                           ENDPOINT                0.000                 36.818  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                 26.332  238     
+{i_mixer/mixed_sum_res1_e1_i0_i24/CK   i_mixer/mixed_sum_res1_e1_i0_i25/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(36.817)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                      -10.683  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_filter/data_out__i1/Q  (SLICE_R10C21D)
+Path End         : i_mixer/mixed_sum_res1_e1_i0_i24/D  (SLICE_R2C19A)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 16
+Delay Ratio      : 49.1% (route), 50.9% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : -10.406 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                  5.499  238     
+{i_filter/data_out__i0/CK   i_filter/data_out__i1/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+i_filter/data_out__i1/CK->i_filter/data_out__i1/Q
+                                          SLICE_R10C21D      CLK_TO_Q1_DELAY         1.388                  6.887  2       
+i_filter/bass_sample[1]                                      NET DELAY               4.573                 11.460  2       
+i_mixer/mult_12/A1->i_mixer/mult_12/O7    DSP_DSP_R1C11      A_TO_O_DELAY            3.699                 15.159  1       
+i_mixer/n126[7]                                              NET DELAY               3.965                 19.124  1       
+i_mixer/mult_526/A7->i_mixer/mult_526/O12
+                                          DSP_DSP_R1C6       A_TO_O_DELAY            6.836                 25.960  1       
+i_mixer/n863[12]                                             NET DELAY               4.944                 30.904  1       
+i_mixer/add_527_add_5_5/C0->i_mixer/add_527_add_5_5/CO0
+                                          SLICE_R2C17C       C0_TO_COUT0_DELAY       0.343                 31.247  2       
+i_mixer/n6671                                                NET DELAY               0.000                 31.247  2       
+i_mixer/add_527_add_5_5/CI1->i_mixer/add_527_add_5_5/CO1
+                                          SLICE_R2C17C       CIN1_TO_COUT1_DELAY     0.277                 31.524  2       
+i_mixer/n3918                                                NET DELAY               0.000                 31.524  2       
+i_mixer/add_527_add_5_7/CI0->i_mixer/add_527_add_5_7/CO0
+                                          SLICE_R2C17D       CIN0_TO_COUT0_DELAY     0.277                 31.801  2       
+i_mixer/n6674                                                NET DELAY               0.000                 31.801  2       
+i_mixer/add_527_add_5_7/CI1->i_mixer/add_527_add_5_7/CO1
+                                          SLICE_R2C17D       CIN1_TO_COUT1_DELAY     0.277                 32.078  2       
+i_mixer/n3920                                                NET DELAY               0.555                 32.633  2       
+i_mixer/add_527_add_5_9/CI0->i_mixer/add_527_add_5_9/CO0
+                                          SLICE_R2C18A       CIN0_TO_COUT0_DELAY     0.277                 32.910  2       
+i_mixer/n6677                                                NET DELAY               0.000                 32.910  2       
+i_mixer/add_527_add_5_9/CI1->i_mixer/add_527_add_5_9/CO1
+                                          SLICE_R2C18A       CIN1_TO_COUT1_DELAY     0.277                 33.187  2       
+i_mixer/n3922                                                NET DELAY               0.000                 33.187  2       
+i_mixer/add_527_add_5_11/CI0->i_mixer/add_527_add_5_11/CO0
+                                          SLICE_R2C18B       CIN0_TO_COUT0_DELAY     0.277                 33.464  2       
+i_mixer/n6680                                                NET DELAY               0.000                 33.464  2       
+i_mixer/add_527_add_5_11/CI1->i_mixer/add_527_add_5_11/CO1
+                                          SLICE_R2C18B       CIN1_TO_COUT1_DELAY     0.277                 33.741  2       
+i_mixer/n3924                                                NET DELAY               0.000                 33.741  2       
+i_mixer/add_527_add_5_13/CI0->i_mixer/add_527_add_5_13/CO0
+                                          SLICE_R2C18C       CIN0_TO_COUT0_DELAY     0.277                 34.018  2       
+i_mixer/n6683                                                NET DELAY               0.000                 34.018  2       
+i_mixer/add_527_add_5_13/CI1->i_mixer/add_527_add_5_13/CO1
+                                          SLICE_R2C18C       CIN1_TO_COUT1_DELAY     0.277                 34.295  2       
+i_mixer/n3926                                                NET DELAY               0.000                 34.295  2       
+i_mixer/add_527_add_5_15/CI0->i_mixer/add_527_add_5_15/CO0
+                                          SLICE_R2C18D       CIN0_TO_COUT0_DELAY     0.277                 34.572  2       
+i_mixer/n6686                                                NET DELAY               0.000                 34.572  2       
+i_mixer/add_527_add_5_15/CI1->i_mixer/add_527_add_5_15/CO1
+                                          SLICE_R2C18D       CIN1_TO_COUT1_DELAY     0.277                 34.849  2       
+i_mixer/n3928                                                NET DELAY               1.216                 36.065  2       
+i_mixer/add_527_add_5_17/D0->i_mixer/add_527_add_5_17/S0
+                                          SLICE_R2C19A       D0_TO_F0_DELAY          0.476                 36.541  1       
+i_mixer/n157[24]                                             NET DELAY               0.000                 36.541  1       
+i_mixer/mixed_sum_res1_e1_i0_i24/D                           ENDPOINT                0.000                 36.541  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                 26.332  238     
+{i_mixer/mixed_sum_res1_e1_i0_i24/CK   i_mixer/mixed_sum_res1_e1_i0_i25/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(36.540)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                      -10.406  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_filter/data_out__i0/Q  (SLICE_R10C21D)
+Path End         : i_mixer/mixed_sum_res1_e2__i20/D  (SLICE_R2C27D)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 21
+Delay Ratio      : 49.1% (route), 50.9% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : -9.841 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                  5.499  238     
+{i_filter/data_out__i0/CK   i_filter/data_out__i1/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+i_filter/data_out__i0/CK->i_filter/data_out__i0/Q
+                                          SLICE_R10C21D      CLK_TO_Q0_DELAY         1.388                  6.887  2       
+i_filter/bass_sample[0]                                      NET DELAY               1.758                  8.645  2       
+i_mixer/sub_3_inv_0_i1_1_lut/A->i_mixer/sub_3_inv_0_i1_1_lut/Z
+                                          SLICE_R10C22C      D0_TO_F0_DELAY          0.449                  9.094  1       
+i_mixer/hp_calc_16__N_335[0]                                 NET DELAY               2.432                 11.526  1       
+i_mixer/clean_sample_15__I_0_2/C0->i_mixer/clean_sample_15__I_0_2/CO0
+                                          SLICE_R10C23A      C0_TO_COUT0_DELAY       0.343                 11.869  2       
+i_mixer/n6473                                                NET DELAY               0.000                 11.869  2       
+i_mixer/clean_sample_15__I_0_2/CI1->i_mixer/clean_sample_15__I_0_2/CO1
+                                          SLICE_R10C23A      CIN1_TO_COUT1_DELAY     0.277                 12.146  2       
+i_mixer/n3961                                                NET DELAY               0.000                 12.146  2       
+i_mixer/clean_sample_15__I_0_4/CI0->i_mixer/clean_sample_15__I_0_4/CO0
+                                          SLICE_R10C23B      CIN0_TO_COUT0_DELAY     0.277                 12.423  2       
+i_mixer/n6476                                                NET DELAY               0.000                 12.423  2       
+i_mixer/clean_sample_15__I_0_4/CI1->i_mixer/clean_sample_15__I_0_4/CO1
+                                          SLICE_R10C23B      CIN1_TO_COUT1_DELAY     0.277                 12.700  2       
+i_mixer/n3963                                                NET DELAY               0.000                 12.700  2       
+i_mixer/clean_sample_15__I_0_6/CI0->i_mixer/clean_sample_15__I_0_6/CO0
+                                          SLICE_R10C23C      CIN0_TO_COUT0_DELAY     0.277                 12.977  2       
+i_mixer/n6479                                                NET DELAY               0.000                 12.977  2       
+i_mixer/clean_sample_15__I_0_6/CI1->i_mixer/clean_sample_15__I_0_6/CO1
+                                          SLICE_R10C23C      CIN1_TO_COUT1_DELAY     0.277                 13.254  2       
+i_mixer/n3965                                                NET DELAY               0.000                 13.254  2       
+i_mixer/clean_sample_15__I_0_8/CI0->i_mixer/clean_sample_15__I_0_8/CO0
+                                          SLICE_R10C23D      CIN0_TO_COUT0_DELAY     0.277                 13.531  2       
+i_mixer/n6482                                                NET DELAY               0.000                 13.531  2       
+i_mixer/clean_sample_15__I_0_8/CI1->i_mixer/clean_sample_15__I_0_8/CO1
+                                          SLICE_R10C23D      CIN1_TO_COUT1_DELAY     0.277                 13.808  2       
+i_mixer/n3967                                                NET DELAY               0.555                 14.363  2       
+i_mixer/clean_sample_15__I_0_10/CI0->i_mixer/clean_sample_15__I_0_10/CO0
+                                          SLICE_R10C24A      CIN0_TO_COUT0_DELAY     0.277                 14.640  2       
+i_mixer/n6485                                                NET DELAY               0.000                 14.640  2       
+i_mixer/clean_sample_15__I_0_10/CI1->i_mixer/clean_sample_15__I_0_10/CO1
+                                          SLICE_R10C24A      CIN1_TO_COUT1_DELAY     0.277                 14.917  2       
+i_mixer/n3969                                                NET DELAY               0.000                 14.917  2       
+i_mixer/clean_sample_15__I_0_12/CI0->i_mixer/clean_sample_15__I_0_12/CO0
+                                          SLICE_R10C24B      CIN0_TO_COUT0_DELAY     0.277                 15.194  2       
+i_mixer/n6488                                                NET DELAY               0.000                 15.194  2       
+i_mixer/clean_sample_15__I_0_12/CI1->i_mixer/clean_sample_15__I_0_12/CO1
+                                          SLICE_R10C24B      CIN1_TO_COUT1_DELAY     0.277                 15.471  2       
+i_mixer/n3971                                                NET DELAY               0.000                 15.471  2       
+i_mixer/clean_sample_15__I_0_14/CI0->i_mixer/clean_sample_15__I_0_14/CO0
+                                          SLICE_R10C24C      CIN0_TO_COUT0_DELAY     0.277                 15.748  2       
+i_mixer/n6491                                                NET DELAY               0.000                 15.748  2       
+i_mixer/clean_sample_15__I_0_14/CI1->i_mixer/clean_sample_15__I_0_14/CO1
+                                          SLICE_R10C24C      CIN1_TO_COUT1_DELAY     0.277                 16.025  2       
+i_mixer/n3973                                                NET DELAY               0.000                 16.025  2       
+i_mixer/clean_sample_15__I_0_16/CI0->i_mixer/clean_sample_15__I_0_16/CO0
+                                          SLICE_R10C24D      CIN0_TO_COUT0_DELAY     0.277                 16.302  2       
+i_mixer/n6494                                                NET DELAY               0.661                 16.963  2       
+i_mixer/clean_sample_15__I_0_16/D1->i_mixer/clean_sample_15__I_0_16/S1
+                                          SLICE_R10C24D      D1_TO_F1_DELAY          0.449                 17.412  15      
+i_mixer/hp_calc[15]                                          NET DELAY               3.080                 20.492  15      
+i_mixer/i2347_3_lut_4_lut_3_lut/A->i_mixer/i2347_3_lut_4_lut_3_lut/Z
+                                          SLICE_R9C26C       B0_TO_F0_DELAY          0.449                 20.941  1       
+i_mixer/high_pass_saturated[5]                               NET DELAY               3.582                 24.523  1       
+i_mixer/mult_11/A5->i_mixer/mult_11/O19   DSP_DSP_R1C24      A_TO_O_DELAY            8.082                 32.605  1       
+i_mixer/n100[19]                                             NET DELAY               2.895                 35.500  1       
+i_mixer.SLICE_291/D1->i_mixer.SLICE_291/F1
+                                          SLICE_R2C27D       D1_TO_F1_DELAY          0.476                 35.976  1       
+i_mixer.n100[19].sig_121.FeedThruLUT                         NET DELAY               0.000                 35.976  1       
+i_mixer/mixed_sum_res1_e2__i20/D                             ENDPOINT                0.000                 35.976  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                 26.332  238     
+{i_mixer/mixed_sum_res1_e2__i19/CK   i_mixer/mixed_sum_res1_e2__i20/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(35.975)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                       -9.841  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_filter/data_out__i0/Q  (SLICE_R10C21D)
+Path End         : i_mixer/mixed_sum_res1_e2__i24/D  (SLICE_R2C26B)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 21
+Delay Ratio      : 49.1% (route), 50.9% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : -9.835 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                  5.499  238     
+{i_filter/data_out__i0/CK   i_filter/data_out__i1/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+i_filter/data_out__i0/CK->i_filter/data_out__i0/Q
+                                          SLICE_R10C21D      CLK_TO_Q0_DELAY         1.388                  6.887  2       
+i_filter/bass_sample[0]                                      NET DELAY               1.758                  8.645  2       
+i_mixer/sub_3_inv_0_i1_1_lut/A->i_mixer/sub_3_inv_0_i1_1_lut/Z
+                                          SLICE_R10C22C      D0_TO_F0_DELAY          0.449                  9.094  1       
+i_mixer/hp_calc_16__N_335[0]                                 NET DELAY               2.432                 11.526  1       
+i_mixer/clean_sample_15__I_0_2/C0->i_mixer/clean_sample_15__I_0_2/CO0
+                                          SLICE_R10C23A      C0_TO_COUT0_DELAY       0.343                 11.869  2       
+i_mixer/n6473                                                NET DELAY               0.000                 11.869  2       
+i_mixer/clean_sample_15__I_0_2/CI1->i_mixer/clean_sample_15__I_0_2/CO1
+                                          SLICE_R10C23A      CIN1_TO_COUT1_DELAY     0.277                 12.146  2       
+i_mixer/n3961                                                NET DELAY               0.000                 12.146  2       
+i_mixer/clean_sample_15__I_0_4/CI0->i_mixer/clean_sample_15__I_0_4/CO0
+                                          SLICE_R10C23B      CIN0_TO_COUT0_DELAY     0.277                 12.423  2       
+i_mixer/n6476                                                NET DELAY               0.000                 12.423  2       
+i_mixer/clean_sample_15__I_0_4/CI1->i_mixer/clean_sample_15__I_0_4/CO1
+                                          SLICE_R10C23B      CIN1_TO_COUT1_DELAY     0.277                 12.700  2       
+i_mixer/n3963                                                NET DELAY               0.000                 12.700  2       
+i_mixer/clean_sample_15__I_0_6/CI0->i_mixer/clean_sample_15__I_0_6/CO0
+                                          SLICE_R10C23C      CIN0_TO_COUT0_DELAY     0.277                 12.977  2       
+i_mixer/n6479                                                NET DELAY               0.000                 12.977  2       
+i_mixer/clean_sample_15__I_0_6/CI1->i_mixer/clean_sample_15__I_0_6/CO1
+                                          SLICE_R10C23C      CIN1_TO_COUT1_DELAY     0.277                 13.254  2       
+i_mixer/n3965                                                NET DELAY               0.000                 13.254  2       
+i_mixer/clean_sample_15__I_0_8/CI0->i_mixer/clean_sample_15__I_0_8/CO0
+                                          SLICE_R10C23D      CIN0_TO_COUT0_DELAY     0.277                 13.531  2       
+i_mixer/n6482                                                NET DELAY               0.000                 13.531  2       
+i_mixer/clean_sample_15__I_0_8/CI1->i_mixer/clean_sample_15__I_0_8/CO1
+                                          SLICE_R10C23D      CIN1_TO_COUT1_DELAY     0.277                 13.808  2       
+i_mixer/n3967                                                NET DELAY               0.555                 14.363  2       
+i_mixer/clean_sample_15__I_0_10/CI0->i_mixer/clean_sample_15__I_0_10/CO0
+                                          SLICE_R10C24A      CIN0_TO_COUT0_DELAY     0.277                 14.640  2       
+i_mixer/n6485                                                NET DELAY               0.000                 14.640  2       
+i_mixer/clean_sample_15__I_0_10/CI1->i_mixer/clean_sample_15__I_0_10/CO1
+                                          SLICE_R10C24A      CIN1_TO_COUT1_DELAY     0.277                 14.917  2       
+i_mixer/n3969                                                NET DELAY               0.000                 14.917  2       
+i_mixer/clean_sample_15__I_0_12/CI0->i_mixer/clean_sample_15__I_0_12/CO0
+                                          SLICE_R10C24B      CIN0_TO_COUT0_DELAY     0.277                 15.194  2       
+i_mixer/n6488                                                NET DELAY               0.000                 15.194  2       
+i_mixer/clean_sample_15__I_0_12/CI1->i_mixer/clean_sample_15__I_0_12/CO1
+                                          SLICE_R10C24B      CIN1_TO_COUT1_DELAY     0.277                 15.471  2       
+i_mixer/n3971                                                NET DELAY               0.000                 15.471  2       
+i_mixer/clean_sample_15__I_0_14/CI0->i_mixer/clean_sample_15__I_0_14/CO0
+                                          SLICE_R10C24C      CIN0_TO_COUT0_DELAY     0.277                 15.748  2       
+i_mixer/n6491                                                NET DELAY               0.000                 15.748  2       
+i_mixer/clean_sample_15__I_0_14/CI1->i_mixer/clean_sample_15__I_0_14/CO1
+                                          SLICE_R10C24C      CIN1_TO_COUT1_DELAY     0.277                 16.025  2       
+i_mixer/n3973                                                NET DELAY               0.000                 16.025  2       
+i_mixer/clean_sample_15__I_0_16/CI0->i_mixer/clean_sample_15__I_0_16/CO0
+                                          SLICE_R10C24D      CIN0_TO_COUT0_DELAY     0.277                 16.302  2       
+i_mixer/n6494                                                NET DELAY               0.661                 16.963  2       
+i_mixer/clean_sample_15__I_0_16/D1->i_mixer/clean_sample_15__I_0_16/S1
+                                          SLICE_R10C24D      D1_TO_F1_DELAY          0.449                 17.412  15      
+i_mixer/hp_calc[15]                                          NET DELAY               3.080                 20.492  15      
+i_mixer/i2347_3_lut_4_lut_3_lut/A->i_mixer/i2347_3_lut_4_lut_3_lut/Z
+                                          SLICE_R9C26C       B0_TO_F0_DELAY          0.449                 20.941  1       
+i_mixer/high_pass_saturated[5]                               NET DELAY               3.582                 24.523  1       
+i_mixer/mult_11/A5->i_mixer/mult_11/O23   DSP_DSP_R1C24      A_TO_O_DELAY            8.076                 32.599  1       
+i_mixer/n100[23]                                             NET DELAY               2.895                 35.494  1       
+i_mixer.SLICE_295/D1->i_mixer.SLICE_295/F1
+                                          SLICE_R2C26B       D1_TO_F1_DELAY          0.476                 35.970  1       
+i_mixer.n100[23].sig_125.FeedThruLUT                         NET DELAY               0.000                 35.970  1       
+i_mixer/mixed_sum_res1_e2__i24/D                             ENDPOINT                0.000                 35.970  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                 26.332  238     
+{i_mixer/mixed_sum_res1_e2__i23/CK   i_mixer/mixed_sum_res1_e2__i24/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(35.969)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                       -9.835  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_filter/data_out__i0/Q  (SLICE_R10C21D)
+Path End         : i_mixer/mixed_sum_res1_e2__i23/D  (SLICE_R2C26B)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 21
+Delay Ratio      : 49.3% (route), 50.7% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : -9.728 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                  5.499  238     
+{i_filter/data_out__i0/CK   i_filter/data_out__i1/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+i_filter/data_out__i0/CK->i_filter/data_out__i0/Q
+                                          SLICE_R10C21D      CLK_TO_Q0_DELAY         1.388                  6.887  2       
+i_filter/bass_sample[0]                                      NET DELAY               1.758                  8.645  2       
+i_mixer/sub_3_inv_0_i1_1_lut/A->i_mixer/sub_3_inv_0_i1_1_lut/Z
+                                          SLICE_R10C22C      D0_TO_F0_DELAY          0.449                  9.094  1       
+i_mixer/hp_calc_16__N_335[0]                                 NET DELAY               2.432                 11.526  1       
+i_mixer/clean_sample_15__I_0_2/C0->i_mixer/clean_sample_15__I_0_2/CO0
+                                          SLICE_R10C23A      C0_TO_COUT0_DELAY       0.343                 11.869  2       
+i_mixer/n6473                                                NET DELAY               0.000                 11.869  2       
+i_mixer/clean_sample_15__I_0_2/CI1->i_mixer/clean_sample_15__I_0_2/CO1
+                                          SLICE_R10C23A      CIN1_TO_COUT1_DELAY     0.277                 12.146  2       
+i_mixer/n3961                                                NET DELAY               0.000                 12.146  2       
+i_mixer/clean_sample_15__I_0_4/CI0->i_mixer/clean_sample_15__I_0_4/CO0
+                                          SLICE_R10C23B      CIN0_TO_COUT0_DELAY     0.277                 12.423  2       
+i_mixer/n6476                                                NET DELAY               0.000                 12.423  2       
+i_mixer/clean_sample_15__I_0_4/CI1->i_mixer/clean_sample_15__I_0_4/CO1
+                                          SLICE_R10C23B      CIN1_TO_COUT1_DELAY     0.277                 12.700  2       
+i_mixer/n3963                                                NET DELAY               0.000                 12.700  2       
+i_mixer/clean_sample_15__I_0_6/CI0->i_mixer/clean_sample_15__I_0_6/CO0
+                                          SLICE_R10C23C      CIN0_TO_COUT0_DELAY     0.277                 12.977  2       
+i_mixer/n6479                                                NET DELAY               0.000                 12.977  2       
+i_mixer/clean_sample_15__I_0_6/CI1->i_mixer/clean_sample_15__I_0_6/CO1
+                                          SLICE_R10C23C      CIN1_TO_COUT1_DELAY     0.277                 13.254  2       
+i_mixer/n3965                                                NET DELAY               0.000                 13.254  2       
+i_mixer/clean_sample_15__I_0_8/CI0->i_mixer/clean_sample_15__I_0_8/CO0
+                                          SLICE_R10C23D      CIN0_TO_COUT0_DELAY     0.277                 13.531  2       
+i_mixer/n6482                                                NET DELAY               0.000                 13.531  2       
+i_mixer/clean_sample_15__I_0_8/CI1->i_mixer/clean_sample_15__I_0_8/CO1
+                                          SLICE_R10C23D      CIN1_TO_COUT1_DELAY     0.277                 13.808  2       
+i_mixer/n3967                                                NET DELAY               0.555                 14.363  2       
+i_mixer/clean_sample_15__I_0_10/CI0->i_mixer/clean_sample_15__I_0_10/CO0
+                                          SLICE_R10C24A      CIN0_TO_COUT0_DELAY     0.277                 14.640  2       
+i_mixer/n6485                                                NET DELAY               0.000                 14.640  2       
+i_mixer/clean_sample_15__I_0_10/CI1->i_mixer/clean_sample_15__I_0_10/CO1
+                                          SLICE_R10C24A      CIN1_TO_COUT1_DELAY     0.277                 14.917  2       
+i_mixer/n3969                                                NET DELAY               0.000                 14.917  2       
+i_mixer/clean_sample_15__I_0_12/CI0->i_mixer/clean_sample_15__I_0_12/CO0
+                                          SLICE_R10C24B      CIN0_TO_COUT0_DELAY     0.277                 15.194  2       
+i_mixer/n6488                                                NET DELAY               0.000                 15.194  2       
+i_mixer/clean_sample_15__I_0_12/CI1->i_mixer/clean_sample_15__I_0_12/CO1
+                                          SLICE_R10C24B      CIN1_TO_COUT1_DELAY     0.277                 15.471  2       
+i_mixer/n3971                                                NET DELAY               0.000                 15.471  2       
+i_mixer/clean_sample_15__I_0_14/CI0->i_mixer/clean_sample_15__I_0_14/CO0
+                                          SLICE_R10C24C      CIN0_TO_COUT0_DELAY     0.277                 15.748  2       
+i_mixer/n6491                                                NET DELAY               0.000                 15.748  2       
+i_mixer/clean_sample_15__I_0_14/CI1->i_mixer/clean_sample_15__I_0_14/CO1
+                                          SLICE_R10C24C      CIN1_TO_COUT1_DELAY     0.277                 16.025  2       
+i_mixer/n3973                                                NET DELAY               0.000                 16.025  2       
+i_mixer/clean_sample_15__I_0_16/CI0->i_mixer/clean_sample_15__I_0_16/CO0
+                                          SLICE_R10C24D      CIN0_TO_COUT0_DELAY     0.277                 16.302  2       
+i_mixer/n6494                                                NET DELAY               0.661                 16.963  2       
+i_mixer/clean_sample_15__I_0_16/D1->i_mixer/clean_sample_15__I_0_16/S1
+                                          SLICE_R10C24D      D1_TO_F1_DELAY          0.449                 17.412  15      
+i_mixer/hp_calc[15]                                          NET DELAY               3.080                 20.492  15      
+i_mixer/i2347_3_lut_4_lut_3_lut/A->i_mixer/i2347_3_lut_4_lut_3_lut/Z
+                                          SLICE_R9C26C       B0_TO_F0_DELAY          0.449                 20.941  1       
+i_mixer/high_pass_saturated[5]                               NET DELAY               3.582                 24.523  1       
+i_mixer/mult_11/A5->i_mixer/mult_11/O22   DSP_DSP_R1C24      A_TO_O_DELAY            7.969                 32.492  1       
+i_mixer/n100[22]                                             NET DELAY               2.895                 35.387  1       
+i_mixer.SLICE_295/D0->i_mixer.SLICE_295/F0
+                                          SLICE_R2C26B       D0_TO_F0_DELAY          0.476                 35.863  1       
+i_mixer.n100[22].sig_124.FeedThruLUT                         NET DELAY               0.000                 35.863  1       
+i_mixer/mixed_sum_res1_e2__i23/D                             ENDPOINT                0.000                 35.863  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                 26.332  238     
+{i_mixer/mixed_sum_res1_e2__i23/CK   i_mixer/mixed_sum_res1_e2__i24/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(35.862)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                       -9.728  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_filter/data_out__i0/Q  (SLICE_R10C21D)
+Path End         : i_mixer/mixed_sum_res1_e2__i25/D  (SLICE_R2C27B)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 21
+Delay Ratio      : 49.3% (route), 50.7% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : -9.698 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                  5.499  238     
+{i_filter/data_out__i0/CK   i_filter/data_out__i1/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+i_filter/data_out__i0/CK->i_filter/data_out__i0/Q
+                                          SLICE_R10C21D      CLK_TO_Q0_DELAY         1.388                  6.887  2       
+i_filter/bass_sample[0]                                      NET DELAY               1.758                  8.645  2       
+i_mixer/sub_3_inv_0_i1_1_lut/A->i_mixer/sub_3_inv_0_i1_1_lut/Z
+                                          SLICE_R10C22C      D0_TO_F0_DELAY          0.449                  9.094  1       
+i_mixer/hp_calc_16__N_335[0]                                 NET DELAY               2.432                 11.526  1       
+i_mixer/clean_sample_15__I_0_2/C0->i_mixer/clean_sample_15__I_0_2/CO0
+                                          SLICE_R10C23A      C0_TO_COUT0_DELAY       0.343                 11.869  2       
+i_mixer/n6473                                                NET DELAY               0.000                 11.869  2       
+i_mixer/clean_sample_15__I_0_2/CI1->i_mixer/clean_sample_15__I_0_2/CO1
+                                          SLICE_R10C23A      CIN1_TO_COUT1_DELAY     0.277                 12.146  2       
+i_mixer/n3961                                                NET DELAY               0.000                 12.146  2       
+i_mixer/clean_sample_15__I_0_4/CI0->i_mixer/clean_sample_15__I_0_4/CO0
+                                          SLICE_R10C23B      CIN0_TO_COUT0_DELAY     0.277                 12.423  2       
+i_mixer/n6476                                                NET DELAY               0.000                 12.423  2       
+i_mixer/clean_sample_15__I_0_4/CI1->i_mixer/clean_sample_15__I_0_4/CO1
+                                          SLICE_R10C23B      CIN1_TO_COUT1_DELAY     0.277                 12.700  2       
+i_mixer/n3963                                                NET DELAY               0.000                 12.700  2       
+i_mixer/clean_sample_15__I_0_6/CI0->i_mixer/clean_sample_15__I_0_6/CO0
+                                          SLICE_R10C23C      CIN0_TO_COUT0_DELAY     0.277                 12.977  2       
+i_mixer/n6479                                                NET DELAY               0.000                 12.977  2       
+i_mixer/clean_sample_15__I_0_6/CI1->i_mixer/clean_sample_15__I_0_6/CO1
+                                          SLICE_R10C23C      CIN1_TO_COUT1_DELAY     0.277                 13.254  2       
+i_mixer/n3965                                                NET DELAY               0.000                 13.254  2       
+i_mixer/clean_sample_15__I_0_8/CI0->i_mixer/clean_sample_15__I_0_8/CO0
+                                          SLICE_R10C23D      CIN0_TO_COUT0_DELAY     0.277                 13.531  2       
+i_mixer/n6482                                                NET DELAY               0.000                 13.531  2       
+i_mixer/clean_sample_15__I_0_8/CI1->i_mixer/clean_sample_15__I_0_8/CO1
+                                          SLICE_R10C23D      CIN1_TO_COUT1_DELAY     0.277                 13.808  2       
+i_mixer/n3967                                                NET DELAY               0.555                 14.363  2       
+i_mixer/clean_sample_15__I_0_10/CI0->i_mixer/clean_sample_15__I_0_10/CO0
+                                          SLICE_R10C24A      CIN0_TO_COUT0_DELAY     0.277                 14.640  2       
+i_mixer/n6485                                                NET DELAY               0.000                 14.640  2       
+i_mixer/clean_sample_15__I_0_10/CI1->i_mixer/clean_sample_15__I_0_10/CO1
+                                          SLICE_R10C24A      CIN1_TO_COUT1_DELAY     0.277                 14.917  2       
+i_mixer/n3969                                                NET DELAY               0.000                 14.917  2       
+i_mixer/clean_sample_15__I_0_12/CI0->i_mixer/clean_sample_15__I_0_12/CO0
+                                          SLICE_R10C24B      CIN0_TO_COUT0_DELAY     0.277                 15.194  2       
+i_mixer/n6488                                                NET DELAY               0.000                 15.194  2       
+i_mixer/clean_sample_15__I_0_12/CI1->i_mixer/clean_sample_15__I_0_12/CO1
+                                          SLICE_R10C24B      CIN1_TO_COUT1_DELAY     0.277                 15.471  2       
+i_mixer/n3971                                                NET DELAY               0.000                 15.471  2       
+i_mixer/clean_sample_15__I_0_14/CI0->i_mixer/clean_sample_15__I_0_14/CO0
+                                          SLICE_R10C24C      CIN0_TO_COUT0_DELAY     0.277                 15.748  2       
+i_mixer/n6491                                                NET DELAY               0.000                 15.748  2       
+i_mixer/clean_sample_15__I_0_14/CI1->i_mixer/clean_sample_15__I_0_14/CO1
+                                          SLICE_R10C24C      CIN1_TO_COUT1_DELAY     0.277                 16.025  2       
+i_mixer/n3973                                                NET DELAY               0.000                 16.025  2       
+i_mixer/clean_sample_15__I_0_16/CI0->i_mixer/clean_sample_15__I_0_16/CO0
+                                          SLICE_R10C24D      CIN0_TO_COUT0_DELAY     0.277                 16.302  2       
+i_mixer/n6494                                                NET DELAY               0.661                 16.963  2       
+i_mixer/clean_sample_15__I_0_16/D1->i_mixer/clean_sample_15__I_0_16/S1
+                                          SLICE_R10C24D      D1_TO_F1_DELAY          0.449                 17.412  15      
+i_mixer/hp_calc[15]                                          NET DELAY               3.080                 20.492  15      
+i_mixer/i2347_3_lut_4_lut_3_lut/A->i_mixer/i2347_3_lut_4_lut_3_lut/Z
+                                          SLICE_R9C26C       B0_TO_F0_DELAY          0.449                 20.941  1       
+i_mixer/high_pass_saturated[5]                               NET DELAY               3.582                 24.523  1       
+i_mixer/mult_11/A5->i_mixer/mult_11/O24   DSP_DSP_R1C24      A_TO_O_DELAY            7.939                 32.462  1       
+i_mixer/n100[24]                                             NET DELAY               2.895                 35.357  1       
+i_mixer.SLICE_297/D0->i_mixer.SLICE_297/F0
+                                          SLICE_R2C27B       D0_TO_F0_DELAY          0.476                 35.833  1       
+i_mixer.n100[24].sig_126.FeedThruLUT                         NET DELAY               0.000                 35.833  1       
+i_mixer/mixed_sum_res1_e2__i25/D                             ENDPOINT                0.000                 35.833  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  238     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY               5.499                 26.332  238     
+i_mixer/mixed_sum_res1_e2__i25/CK                            CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(35.832)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                       -9.698  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+
+
+===============================================================
+3  Hold at Speed Grade m Corner at -40 Degrees
+===============================================================
+
+3.1  Endpoint slacks
+=======================
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+i_fifo/mem0/WDATA8                       |    1.454 ns 
+i_fifo/mem0/WDATA9                       |    1.454 ns 
+i_fifo/mem0/WDATA10                      |    1.454 ns 
+i_fifo/mem0/WDATA11                      |    1.454 ns 
+i_fifo/mem0/WDATA12                      |    1.454 ns 
+i_fifo/mem0/WDATA13                      |    1.454 ns 
+i_fifo/mem0/WDATA14                      |    1.454 ns 
+i_fifo/mem0/WDATA15                      |    1.454 ns 
+i_fifo/mem0/WADDR4                       |    1.454 ns 
+i_fifo/mem0/WADDR6                       |    1.454 ns 
+-------------------------------------------------------
+                                         |             
+Hold # of endpoints with negative slack: |           0 
+                                         |             
+-------------------------------------------------------
+
+3.2  Detailed Report
+=======================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : i_spi/fifo_data_out_i0_i8/Q  (SLICE_R6C11A)
+Path End         : i_fifo/mem0/WDATA8  (EBR_EBR_R7C10)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 1
+Delay Ratio      : 47.8% (route), 52.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.454 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+{i_spi/fifo_data_out_i0_i9/CK   i_spi/fifo_data_out_i0_i8/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+i_spi/fifo_data_out_i0_i8/CK->i_spi/fifo_data_out_i0_i8/Q
+                                          SLICE_R6C11A       CLK_TO_Q1_DELAY  0.779                  3.863  1       
+i_fifo/audio_raw_spi[8]                                      NET DELAY        0.712                  4.575  1       
+i_fifo/mem0/WDATA8                                           ENDPOINT         0.000                  4.575  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+i_fifo/mem0/WCLK                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.037                  3.121  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.121  
+Arrival Time                                                                                         4.575  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.454  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_spi/fifo_data_out_i0_i9/Q  (SLICE_R6C11A)
+Path End         : i_fifo/mem0/WDATA9  (EBR_EBR_R7C10)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 1
+Delay Ratio      : 47.8% (route), 52.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.454 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+{i_spi/fifo_data_out_i0_i9/CK   i_spi/fifo_data_out_i0_i8/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+i_spi/fifo_data_out_i0_i9/CK->i_spi/fifo_data_out_i0_i9/Q
+                                          SLICE_R6C11A       CLK_TO_Q0_DELAY  0.779                  3.863  1       
+i_fifo/audio_raw_spi[9]                                      NET DELAY        0.712                  4.575  1       
+i_fifo/mem0/WDATA9                                           ENDPOINT         0.000                  4.575  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+i_fifo/mem0/WCLK                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.037                  3.121  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.121  
+Arrival Time                                                                                         4.575  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.454  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_spi/fifo_data_out_i0_i10/Q  (SLICE_R6C11C)
+Path End         : i_fifo/mem0/WDATA10  (EBR_EBR_R7C10)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 1
+Delay Ratio      : 47.8% (route), 52.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.454 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+{i_spi/fifo_data_out_i0_i11/CK   i_spi/fifo_data_out_i0_i10/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+i_spi/fifo_data_out_i0_i10/CK->i_spi/fifo_data_out_i0_i10/Q
+                                          SLICE_R6C11C       CLK_TO_Q1_DELAY  0.779                  3.863  1       
+i_fifo/audio_raw_spi[10]                                     NET DELAY        0.712                  4.575  1       
+i_fifo/mem0/WDATA10                                          ENDPOINT         0.000                  4.575  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+i_fifo/mem0/WCLK                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.037                  3.121  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.121  
+Arrival Time                                                                                         4.575  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.454  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_spi/fifo_data_out_i0_i11/Q  (SLICE_R6C11C)
+Path End         : i_fifo/mem0/WDATA11  (EBR_EBR_R7C10)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 1
+Delay Ratio      : 47.8% (route), 52.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.454 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+{i_spi/fifo_data_out_i0_i11/CK   i_spi/fifo_data_out_i0_i10/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+i_spi/fifo_data_out_i0_i11/CK->i_spi/fifo_data_out_i0_i11/Q
+                                          SLICE_R6C11C       CLK_TO_Q0_DELAY  0.779                  3.863  1       
+i_fifo/audio_raw_spi[11]                                     NET DELAY        0.712                  4.575  1       
+i_fifo/mem0/WDATA11                                          ENDPOINT         0.000                  4.575  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+i_fifo/mem0/WCLK                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.037                  3.121  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.121  
+Arrival Time                                                                                         4.575  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.454  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_spi/fifo_data_out_i0_i12/Q  (SLICE_R6C10D)
+Path End         : i_fifo/mem0/WDATA12  (EBR_EBR_R7C10)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 1
+Delay Ratio      : 47.8% (route), 52.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.454 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+{i_spi/fifo_data_out_i0_i13/CK   i_spi/fifo_data_out_i0_i12/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+i_spi/fifo_data_out_i0_i12/CK->i_spi/fifo_data_out_i0_i12/Q
+                                          SLICE_R6C10D       CLK_TO_Q1_DELAY  0.779                  3.863  1       
+i_fifo/audio_raw_spi[12]                                     NET DELAY        0.712                  4.575  1       
+i_fifo/mem0/WDATA12                                          ENDPOINT         0.000                  4.575  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+i_fifo/mem0/WCLK                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.037                  3.121  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.121  
+Arrival Time                                                                                         4.575  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.454  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_spi/fifo_data_out_i0_i13/Q  (SLICE_R6C10D)
+Path End         : i_fifo/mem0/WDATA13  (EBR_EBR_R7C10)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 1
+Delay Ratio      : 47.8% (route), 52.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.454 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+{i_spi/fifo_data_out_i0_i13/CK   i_spi/fifo_data_out_i0_i12/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+i_spi/fifo_data_out_i0_i13/CK->i_spi/fifo_data_out_i0_i13/Q
+                                          SLICE_R6C10D       CLK_TO_Q0_DELAY  0.779                  3.863  1       
+i_fifo/audio_raw_spi[13]                                     NET DELAY        0.712                  4.575  1       
+i_fifo/mem0/WDATA13                                          ENDPOINT         0.000                  4.575  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+i_fifo/mem0/WCLK                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.037                  3.121  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.121  
+Arrival Time                                                                                         4.575  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.454  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_spi/fifo_data_out_i0_i14/Q  (SLICE_R6C10A)
+Path End         : i_fifo/mem0/WDATA14  (EBR_EBR_R7C10)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 1
+Delay Ratio      : 47.8% (route), 52.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.454 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+{i_spi/fifo_data_out_i0_i15/CK   i_spi/fifo_data_out_i0_i14/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+i_spi/fifo_data_out_i0_i14/CK->i_spi/fifo_data_out_i0_i14/Q
+                                          SLICE_R6C10A       CLK_TO_Q1_DELAY  0.779                  3.863  1       
+i_fifo/audio_raw_spi[14]                                     NET DELAY        0.712                  4.575  1       
+i_fifo/mem0/WDATA14                                          ENDPOINT         0.000                  4.575  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+i_fifo/mem0/WCLK                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.037                  3.121  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.121  
+Arrival Time                                                                                         4.575  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.454  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_spi/fifo_data_out_i0_i15/Q  (SLICE_R6C10A)
+Path End         : i_fifo/mem0/WDATA15  (EBR_EBR_R7C10)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 1
+Delay Ratio      : 47.8% (route), 52.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.454 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+{i_spi/fifo_data_out_i0_i15/CK   i_spi/fifo_data_out_i0_i14/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+i_spi/fifo_data_out_i0_i15/CK->i_spi/fifo_data_out_i0_i15/Q
+                                          SLICE_R6C10A       CLK_TO_Q0_DELAY  0.779                  3.863  1       
+i_fifo/audio_raw_spi[15]                                     NET DELAY        0.712                  4.575  1       
+i_fifo/mem0/WDATA15                                          ENDPOINT         0.000                  4.575  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+i_fifo/mem0/WCLK                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.037                  3.121  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.121  
+Arrival Time                                                                                         4.575  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.454  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_fifo/w_ptr_bin__i0_i4/Q  (SLICE_R8C11B)
+Path End         : i_fifo/mem0/WADDR4  (EBR_EBR_R7C10)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 1
+Delay Ratio      : 47.8% (route), 52.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.454 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+{i_fifo/w_ptr_bin__i0_i4/CK   i_fifo/w_ptr_bin__i0_i5/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+i_fifo/w_ptr_bin__i0_i4/CK->i_fifo/w_ptr_bin__i0_i4/Q
+                                          SLICE_R8C11B       CLK_TO_Q0_DELAY  0.779                  3.863  3       
+i_fifo/w_ptr_bin[4]                                          NET DELAY        0.712                  4.575  3       
+i_fifo/mem0/WADDR4                                           ENDPOINT         0.000                  4.575  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+i_fifo/mem0/WCLK                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.037                  3.121  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.121  
+Arrival Time                                                                                         4.575  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.454  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : i_fifo/w_ptr_bin__i0_i6/Q  (SLICE_R8C11A)
+Path End         : i_fifo/mem0/WADDR6  (EBR_EBR_R7C10)
+Source Clock     : clk_48mhz (R)
+Destination Clock: clk_48mhz (R)
+Logic Level      : 1
+Delay Ratio      : 47.8% (route), 52.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.454 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+{i_fifo/w_ptr_bin__i0_i7/CK   i_fifo/w_ptr_bin__i0_i6/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+i_fifo/w_ptr_bin__i0_i6/CK->i_fifo/w_ptr_bin__i0_i6/Q
+                                          SLICE_R8C11A       CLK_TO_Q1_DELAY  0.779                  3.863  3       
+i_fifo/w_ptr_bin[6]                                          NET DELAY        0.712                  4.575  3       
+i_fifo/mem0/WADDR6                                           ENDPOINT         0.000                  4.575  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc.osc_inst/CLKHF                     HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  239     
+i_mixer_ctrl/clk_48mhz                                       NET DELAY        3.084                  3.084  239     
+i_fifo/mem0/WCLK                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.037                  3.121  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.121  
+Arrival Time                                                                                         4.575  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.454  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+
+

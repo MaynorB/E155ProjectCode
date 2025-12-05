@@ -1,0 +1,12 @@
+#Start recording tcl command: 9/12/2025 15:43:33
+#Project Location: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/dev_board_test.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_sevseg.sv"
+prj_disable_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_sevseg.sv"
+prj_remove_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/lab1_co.sv"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/sevseg.sv"
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv"
+prj_disable_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv"
+#Stop recording: 9/12/2025 17:59:34

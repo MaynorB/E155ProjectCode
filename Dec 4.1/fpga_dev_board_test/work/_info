@@ -1,0 +1,274 @@
+m255
+K4
+z2
+Z0 !s12c _opt2
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt1
+R1
+Z3 !s12c _opt
+R1
+!s11e vcom 2024.2 2024.05, May 20 2024
+R0
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z4 dC:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test
+T_opt
+!s110 1757722431
+VKME6Ch:NiZKGFaN]JgY@g0
+Z5 04 18 4 work testbench_ledlogic fast 0
+=1-00be43e56ed7-68c4b73f-1a6-59c8
+R1
+Z6 !s12f OEM25U2 
+Z7 !s12b OEM100
+Z8 !s124 OEM100
+Z9 !s135 nogc
+o-quiet -auto_acc_if_foreign -work work -L iCE40UP +acc -L iCE40UP
+Z10 tCvgOpt 0
+n@_opt
+Z11 OL;O;2024.2;79
+R4
+T_opt1
+!s110 1757724573
+VadaNcB;J8A[2o]][D6O[R1
+04 9 4 work testbench fast 0
+=1-00be43e56ed7-68c4bf9d-2cf-5f20
+R1
+!s12f OEM25U3 
+R7
+R8
+R9
+Z12 o-quiet -auto_acc_if_foreign -work work +acc -L iCE40UP
+R10
+n@_opt1
+R11
+R4
+T_opt2
+!s110 1757724983
+VN7oZ6=@ka18cdT4c>[4_51
+R5
+=2-00be43e56ed7-68c4c137-183-4ee4
+R1
+R6
+R7
+R8
+R9
+R12
+R10
+n@_opt2
+R11
+vlab1_co
+Z13 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1757046385
+Z14 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 K[8cRT1ii64=P4QBlbokd0
+Ij8UdQW^g<<f1fK_M]WkDk1
+S1
+R4
+w1756945321
+8C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/lab1_co.sv
+FC:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/lab1_co.sv
+!i122 28
+L0 8 27
+Z15 OL;L;2024.2;79
+31
+!s108 1757046385.000000
+!s107 C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/lab1_co.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/lab1_co.sv|
+!i113 0
+Z16 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R10
+vleds_co
+2C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv
+R13
+Z17 !s110 1757724971
+!i10b 1
+!s100 9ze1GASBf<[O?P^RoDhBQ0
+IKY7P[RbUNLmf^C?=fl=TH2
+S1
+R4
+w1757724836
+8C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv
+FC:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv
+!i122 108
+L0 6 38
+R14
+R15
+r1
+!s85 0
+31
+Z18 !s108 1757724971.000000
+!s107 C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv|
+!i113 0
+R16
+R10
+vsevseg
+2C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/sevseg.sv
+R13
+R17
+!i10b 1
+!s100 J44Wkj@@7`3VLFF0ZMC4;0
+I4gJ]SSWD`RzKFDTXM^KGh1
+S1
+R4
+w1757724214
+8C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/sevseg.sv
+FC:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/sevseg.sv
+!i122 106
+L0 8 25
+R14
+R15
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/sevseg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/sevseg.sv|
+!i113 0
+R16
+R10
+vtestbench
+2C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench.sv
+R13
+R17
+!i10b 1
+!s100 G_]3>1`VeZ=^3Nf^Co6bN0
+IiZR8GAZ<05HA4:Z6d<bka3
+S1
+R4
+Z19 w1757723209
+8C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench.sv
+FC:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench.sv
+!i122 109
+L0 7 171
+R14
+R15
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench.sv|
+!i113 0
+R16
+R10
+vtestbench_ledlogic
+2C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv
+R13
+R17
+!i10b 1
+!s100 Qoi<JiREz=ObYN?MkZmM32
+I_2Czf4T0;djKgT<22WJD70
+S1
+R4
+w1757724966
+8C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv
+FC:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv
+!i122 107
+L0 7 167
+R14
+R15
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv|
+!i113 0
+R16
+R10
+vtestbench_sevseg
+2C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_sevseg.sv
+R13
+R17
+!i10b 1
+!s100 SYI1E0MWaUV]PU3W>4d5c0
+I?fJdkPgCUcOldI4m8O?M:3
+S1
+R4
+R19
+8C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_sevseg.sv
+FC:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_sevseg.sv
+!i122 110
+L0 7 144
+R14
+R15
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_sevseg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_sevseg.sv|
+!i113 0
+R16
+R10
+vtop
+2C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/top.sv
+R13
+R17
+!i10b 1
+!s100 `oi?BmjHeSCm8e:MVE]Fa2
+Iz`]fG[B`i0A[::RAghQi@0
+S1
+R4
+R19
+8C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/top.sv
+FC:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/top.sv
+!i122 111
+L0 6 12
+R14
+R15
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/top.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/top.sv|
+!i113 0
+R16
+R10

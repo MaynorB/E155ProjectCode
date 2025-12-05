@@ -1,0 +1,85 @@
+#Start recording tcl command: 11/17/2025 21:31:01
+#Project Location: C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/dev_board_test.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/sine_wave_gen.sv"
+prj_add_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/sine_rom.sv"
+prj_run PAR -impl impl_1
+prj_disable_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/spi_sniffer.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/rate_synchronizer.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt -impl "impl_1" {top} {upduino_v3_top}
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_enable_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/spi_sniffer.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt -impl "impl_1" {top} {top}
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_remove_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/sync_fifo.sv"
+prj_remove_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/sine_wave_440hz.hex"
+prj_disable_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/sine_rom.sv"
+prj_disable_source "C:/Users/cojedadesilva/Downloads/Project progress/Project progress Nov 15/fpga_dev_board_test/source/impl_1/sine_wave_gen.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 11/18/2025 05:01:43

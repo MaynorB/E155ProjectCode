@@ -1,0 +1,59 @@
+-a "iCE40UP"
+-p iCE40UP5K
+-t SG48
+-sp "High-Performance_1.2V"
+-frequency 200
+-optimization_goal Area
+-bram_utilization 100
+-ramstyle Auto
+-romstyle auto
+-dsp_utilization 100
+-use_dsp 1
+-use_carry_chain 1
+-carry_chain_length 0
+-resource_sharing 1
+-propagate_constants 1
+-remove_duplicate_regs 1
+
+-max_fanout 1000
+-fsm_encoding_style Auto
+
+-fix_gated_clocks 1
+-loop_limit 1950
+
+
+
+
+
+
+-use_io_reg auto
+
+
+
+
+
+
+
+
+-drc_cfg 35103300 20
+-use_io_insertion 1
+
+-resolve_mixed_drivers 0
+-path "C:/lscc/radiant/2024.2/ispfpga/ice40tp/data" "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/impl_1" "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test"
+-ver "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd"
+-sver "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/upduin_v3_top.sv"
+"C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/i2s_player.sv"
+"C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/async_fifo.sv"
+"C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/rate_synchronizer.sv"
+"C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/spi_receiver.sv"
+"C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/fir_filter.sv"
+"C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/mixer.sv"
+"C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/spi_ctrl.sv"
+
+
+-path "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test"
+-top top
+-udb "dev_board_test_impl_1_rtl.udb"
+-output_hdl "dev_board_test_impl_1.vm"
+

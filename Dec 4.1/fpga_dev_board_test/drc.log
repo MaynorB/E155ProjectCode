@@ -1,0 +1,11 @@
+DRC: Design Rule Check Radiant Software (64-bit) 2024.2.0.3.0
+Thu Dec  4 06:52:53 2025
+
+WARNING <1027013> - No port matched 'led_pin'.
+WARNING <1026001> - C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/pins.pdc (23) : Can't resolve object 'led_pin' in constraint 'ldc_set_location -site {37} [get_ports led_pin]'.
+WARNING <1027013> - No port matched 'led_pin'.
+WARNING <1026001> - C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/pins.pdc (24) : Can't resolve object 'led_pin' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports led_pin]'.
+WARNING <1027013> - No port matched 'led_fifo_empty_pin'.
+WARNING <1026001> - C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/pins.pdc (25) : Can't resolve object 'led_fifo_empty_pin' in constraint 'ldc_set_location -site {36} [get_ports led_fifo_empty_pin]'.
+WARNING <1027013> - No port matched 'led_fifo_empty_pin'.
+WARNING <1026001> - C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/pins.pdc (26) : Can't resolve object 'led_fifo_empty_pin' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports led_fifo_empty_pin]'.

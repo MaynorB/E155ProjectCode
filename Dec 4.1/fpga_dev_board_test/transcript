@@ -1,0 +1,338 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project sim
+# Compile of sevseg.sv was successful.
+# Compile of testbench_ledlogic.sv was successful.
+# Compile of leds_co.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of top.sv was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui work.testbench {-voptargs=+acc -L iCE40UP}
+# vsim -gui work.testbench -voptargs="+acc -L iCE40UP" 
+# Start time: 17:49:33 on Sep 12,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.leds_co(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.sevseg(fast)
+add wave  \
+sim:/testbench/clk \
+sim:/testbench/reset \
+sim:/testbench/s1 \
+sim:/testbench/s2 \
+sim:/testbench/disps \
+sim:/testbench/number \
+sim:/testbench/leds \
+sim:/testbench/expected \
+sim:/testbench/counter \
+sim:/testbench/testvectors \
+sim:/testbench/vectornum \
+sim:/testbench/errors
+run 320
+# Causality operation skipped due to absence of debug database file
+vsim -gui {-voptargs=+acc -L iCE40UP} work.testbench_ledlogic
+# End time: 17:51:00 on Sep 12,2025, Elapsed time: 0:01:27
+# Errors: 0, Warnings: 6
+# vsim -gui -voptargs="+acc -L iCE40UP" work.testbench_ledlogic 
+# Start time: 17:51:00 on Sep 12,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv(138): (vopt-2123) Missing argument for format specification '%b'.
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=1.
+# Error loading design
+# End time: 17:51:00 on Sep 12,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+# Compile of sevseg.sv was successful.
+# Compile of testbench_ledlogic.sv was successful.
+# Compile of leds_co.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of top.sv was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui {-voptargs=+acc -L iCE40UP} work.testbench_ledlogic
+# vsim -gui -voptargs="+acc -L iCE40UP" work.testbench_ledlogic 
+# Start time: 17:51:42 on Sep 12,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_ledlogic(fast)
+# Loading work.leds_co(fast)
+# Loading iCE40UP.HSOSC(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 7, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_ledlogic/dut File: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv Line: 75
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 's1'. The port definition is at: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_ledlogic/dut File: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv Line: 75
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 's2'. The port definition is at: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_ledlogic/dut File: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv Line: 75
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'counter'. The port definition is at: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_ledlogic/dut File: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv Line: 75
+# ** Warning: (vsim-3722) C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv(75): [TFMPC] - Missing connection for port 'disps'.
+# ** Warning: (vsim-3722) C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv(75): [TFMPC] - Missing connection for port 'sout'.
+# ** Warning: (vsim-3722) C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv(75): [TFMPC] - Missing connection for port 'leds'.
+add wave  \
+sim:/testbench_ledlogic/clk \
+sim:/testbench_ledlogic/reset \
+sim:/testbench_ledlogic/s1 \
+sim:/testbench_ledlogic/s2 \
+sim:/testbench_ledlogic/counter \
+sim:/testbench_ledlogic/disps \
+sim:/testbench_ledlogic/sout \
+sim:/testbench_ledlogic/leds \
+sim:/testbench_ledlogic/expected \
+sim:/testbench_ledlogic/testvectors \
+sim:/testbench_ledlogic/vectornum \
+sim:/testbench_ledlogic/errors \
+sim:/testbench_ledlogic/s \
+sim:/testbench_ledlogic/fpga_blink_out \
+sim:/testbench_ledlogic/led0 \
+sim:/testbench_ledlogic/led1
+run 320
+# Error: inputs = 11111101
+#  outputs = xxxxxxxxx ( 110111100 expected)
+# Error: inputs = 11111100
+#  outputs = xxxxxxxxx ( 110011011 expected)
+# Error: inputs = 11111011
+#  outputs = xxxxxxxxx ( 101111010 expected)
+# Error: inputs = 11111010
+#  outputs = xxxxxxxxx ( 101011001 expected)
+# Error: inputs = 11111001
+#  outputs = xxxxxxxxx ( 100111000 expected)
+# Error: inputs = 11111000
+#  outputs = xxxxxxxxx ( 100010111 expected)
+# Error: inputs = 11110111
+#  outputs = xxxxxxxxx ( 011110110 expected)
+# Error: inputs = 11110110
+#  outputs = xxxxxxxxx ( 011010101 expected)
+# Error: inputs = 11110101
+#  outputs = xxxxxxxxx ( 010110100 expected)
+# Error: inputs = 11110100
+#  outputs = xxxxxxxxx ( 010010011 expected)
+# Error: inputs = 11110011
+#  outputs = xxxxxxxxx ( 001110010 expected)
+# Error: inputs = 11110010
+#  outputs = xxxxxxxxx ( 001010001 expected)
+# Error: inputs = 11110001
+#  outputs = xxxxxxxxx ( 000110000 expected)
+# Error: inputs = 11110000
+#  outputs = xxxxxxxxx ( 000001111 expected)
+# Error: inputs = 11110000
+#  outputs = xxxxxxxxx ( 111101111 expected)
+# Error: inputs = 11100000
+#  outputs = xxxxxxxxx ( 111001110 expected)
+# Error: inputs = 11010000
+#  outputs = xxxxxxxxx ( 110101101 expected)
+# Error: inputs = 11000000
+#  outputs = xxxxxxxxx ( 110001100 expected)
+# Error: inputs = 10110000
+#  outputs = xxxxxxxxx ( 101101011 expected)
+# Error: inputs = 10100000
+#  outputs = xxxxxxxxx ( 101001010 expected)
+# Error: inputs = 10010000
+#  outputs = xxxxxxxxx ( 100101001 expected)
+# Error: inputs = 10000000
+#  outputs = xxxxxxxxx ( 100001000 expected)
+# Error: inputs = 01110000
+#  outputs = xxxxxxxxx ( 011100111 expected)
+# Error: inputs = 01100000
+#  outputs = xxxxxxxxx ( 011000110 expected)
+# Error: inputs = 01010000
+#  outputs = xxxxxxxxx ( 010100101 expected)
+# Error: inputs = 01000000
+#  outputs = xxxxxxxxx ( 010000100 expected)
+# Error: inputs = 00110000
+#  outputs = xxxxxxxxx ( 001100011 expected)
+# Error: inputs = 00100000
+#  outputs = xxxxxxxxx ( 001000010 expected)
+# Error: inputs = 00010000
+#  outputs = xxxxxxxxx ( 000100001 expected)
+# Error: inputs = 00000000
+#  outputs = xxxxxxxxx ( 000000000 expected)
+#         32 tests completed with         30 errors
+# ** Note: $stop    : C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv(163)
+#    Time: 315 ps  Iteration: 1  Instance: /testbench_ledlogic
+# Break in Module testbench_ledlogic at C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv line 163
+# Compile of sevseg.sv was successful.
+# Compile of testbench_ledlogic.sv was successful.
+# Compile of leds_co.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of top.sv was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui {-voptargs=+acc -L iCE40UP} work.testbench_ledlogic
+# End time: 17:54:11 on Sep 12,2025, Elapsed time: 0:02:29
+# Errors: 0, Warnings: 11
+# vsim -gui -voptargs="+acc -L iCE40UP" work.testbench_ledlogic 
+# Start time: 17:54:11 on Sep 12,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_ledlogic(fast)
+# Loading work.leds_co(fast)
+# Loading iCE40UP.HSOSC(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 7, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_ledlogic/dut File: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv Line: 75
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 's1'. The port definition is at: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_ledlogic/dut File: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv Line: 75
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 's2'. The port definition is at: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_ledlogic/dut File: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv Line: 75
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'counter'. The port definition is at: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_ledlogic/dut File: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv Line: 75
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'disps'. The port definition is at: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/leds_co.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_ledlogic/dut File: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv Line: 75
+# ** Warning: (vsim-3722) C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv(75): [TFMPC] - Missing connection for port 'sout'.
+# ** Warning: (vsim-3722) C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv(75): [TFMPC] - Missing connection for port 'leds'.
+add wave  \
+sim:/testbench_ledlogic/clk \
+sim:/testbench_ledlogic/reset \
+sim:/testbench_ledlogic/s1 \
+sim:/testbench_ledlogic/s2 \
+sim:/testbench_ledlogic/counter \
+sim:/testbench_ledlogic/disps \
+sim:/testbench_ledlogic/sout \
+sim:/testbench_ledlogic/leds \
+sim:/testbench_ledlogic/expected \
+sim:/testbench_ledlogic/testvectors \
+sim:/testbench_ledlogic/vectornum \
+sim:/testbench_ledlogic/errors \
+sim:/testbench_ledlogic/s \
+sim:/testbench_ledlogic/fpga_blink_out \
+sim:/testbench_ledlogic/led0 \
+sim:/testbench_ledlogic/led1
+run 320
+# Error: inputs = 11111101
+#  outputs = xxxxxxxxx ( 110111100 expected)
+# Error: inputs = 11111100
+#  outputs = xxxxxxxxx ( 110011011 expected)
+# Error: inputs = 11111011
+#  outputs = xxxxxxxxx ( 101111010 expected)
+# Error: inputs = 11111010
+#  outputs = xxxxxxxxx ( 101011001 expected)
+# Error: inputs = 11111001
+#  outputs = xxxxxxxxx ( 100111000 expected)
+# Error: inputs = 11111000
+#  outputs = xxxxxxxxx ( 100010111 expected)
+# Error: inputs = 11110111
+#  outputs = xxxxxxxxx ( 011110110 expected)
+# Error: inputs = 11110110
+#  outputs = xxxxxxxxx ( 011010101 expected)
+# Error: inputs = 11110101
+#  outputs = xxxxxxxxx ( 010110100 expected)
+# Error: inputs = 11110100
+#  outputs = xxxxxxxxx ( 010010011 expected)
+# Error: inputs = 11110011
+#  outputs = xxxxxxxxx ( 001110010 expected)
+# Error: inputs = 11110010
+#  outputs = xxxxxxxxx ( 001010001 expected)
+# Error: inputs = 11110001
+#  outputs = xxxxxxxxx ( 000110000 expected)
+# Error: inputs = 11110000
+#  outputs = xxxxxxxxx ( 000001111 expected)
+# Error: inputs = 11110000
+#  outputs = xxxxxxxxx ( 111101111 expected)
+# Error: inputs = 11100000
+#  outputs = xxxxxxxxx ( 111001110 expected)
+# Error: inputs = 11010000
+#  outputs = xxxxxxxxx ( 110101101 expected)
+# Error: inputs = 11000000
+#  outputs = xxxxxxxxx ( 110001100 expected)
+# Error: inputs = 10110000
+#  outputs = xxxxxxxxx ( 101101011 expected)
+# Error: inputs = 10100000
+#  outputs = xxxxxxxxx ( 101001010 expected)
+# Error: inputs = 10010000
+#  outputs = xxxxxxxxx ( 100101001 expected)
+# Error: inputs = 10000000
+#  outputs = xxxxxxxxx ( 100001000 expected)
+# Error: inputs = 01110000
+#  outputs = xxxxxxxxx ( 011100111 expected)
+# Error: inputs = 01100000
+#  outputs = xxxxxxxxx ( 011000110 expected)
+# Error: inputs = 01010000
+#  outputs = xxxxxxxxx ( 010100101 expected)
+# Error: inputs = 01000000
+#  outputs = xxxxxxxxx ( 010000100 expected)
+# Error: inputs = 00110000
+#  outputs = xxxxxxxxx ( 001100011 expected)
+# Error: inputs = 00100000
+#  outputs = xxxxxxxxx ( 001000010 expected)
+# Error: inputs = 00010000
+#  outputs = xxxxxxxxx ( 000100001 expected)
+# Error: inputs = 00000000
+#  outputs = xxxxxxxxx ( 000000000 expected)
+#         32 tests completed with         30 errors
+# ** Note: $stop    : C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv(163)
+#    Time: 315 ps  Iteration: 1  Instance: /testbench_ledlogic
+# Break in Module testbench_ledlogic at C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv line 163
+# Compile of sevseg.sv was successful.
+# Compile of testbench_ledlogic.sv was successful.
+# Compile of leds_co.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of testbench_sevseg.sv was successful.
+# Compile of top.sv was successful.
+# 6 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench_ledlogic(fast)
+# Loading work.leds_co(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench_ledlogic/s'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench_ledlogic/fpga_blink_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench_ledlogic/led0'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench_ledlogic/led1'. 
+vsim -gui {-voptargs=+acc -L iCE40UP} work.testbench_ledlogic
+# End time: 17:56:36 on Sep 12,2025, Elapsed time: 0:02:25
+# Errors: 0, Warnings: 2
+# vsim -gui -voptargs="+acc -L iCE40UP" work.testbench_ledlogic 
+# Start time: 17:56:36 on Sep 12,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.testbench_ledlogic(fast)
+# Loading work.leds_co(fast)
+# Loading iCE40UP.HSOSC(fast)
+add wave  \
+sim:/testbench_ledlogic/clk \
+sim:/testbench_ledlogic/reset \
+sim:/testbench_ledlogic/s1 \
+sim:/testbench_ledlogic/s2 \
+sim:/testbench_ledlogic/counter \
+sim:/testbench_ledlogic/disps \
+sim:/testbench_ledlogic/sout \
+sim:/testbench_ledlogic/leds \
+sim:/testbench_ledlogic/expected \
+sim:/testbench_ledlogic/testvectors \
+sim:/testbench_ledlogic/vectornum \
+sim:/testbench_ledlogic/errors
+run 320
+#         32 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv(164)
+#    Time: 315 ps  Iteration: 1  Instance: /testbench_ledlogic
+# Break in Module testbench_ledlogic at C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench_ledlogic.sv line 164
+# Load canceled
+# End time: 17:59:38 on Sep 12,2025, Elapsed time: 0:03:02
+# Errors: 0, Warnings: 1

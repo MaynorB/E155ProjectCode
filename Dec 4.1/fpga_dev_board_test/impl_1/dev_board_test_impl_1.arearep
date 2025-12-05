@@ -1,0 +1,94 @@
+----------------------------------------------------------------------
+Report for cell top.TECH
+Register bits:  459 of 5280 (8.693%)
+I/O cells:      8
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2          100.0
+                               CCU2        93          100.0
+                            FD1P3XZ       459          100.0
+                              HSOSC         1          100.0
+                                 IB         5          100.0
+                                INV         1          100.0
+                              IOL_B         6          100.0
+                               LUT4       238          100.0
+                              MAC16         4          100.0
+                                 OB         3          100.0
+SUB MODULES
+                         async_fifo         1
+                         fir_filter         1
+                         i2s_player         1
+                              mixer         1
+                  rate_synchronizer         1
+                           spi_ctrl         1
+                       spi_receiver         1
+                              TOTAL       819
+----------------------------------------------------------------------
+Report for cell rate_synchronizer.v1
+Instance Path : i_sync
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         4            4.3
+                            FD1P3XZ        28            6.1
+                              IOL_B         1           16.7
+                               LUT4         4            1.7
+                              TOTAL        37
+----------------------------------------------------------------------
+Report for cell spi_receiver.v1
+Instance Path : i_spi
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        37            8.1
+                              IOL_B         3           50.0
+                               LUT4         8            3.4
+                              TOTAL        48
+----------------------------------------------------------------------
+Report for cell i2s_player.v1
+Instance Path : i_player
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         4            4.3
+                            FD1P3XZ        40            8.7
+                                INV         1          100.0
+                              IOL_B         1           16.7
+                               LUT4        37           15.5
+                              TOTAL        83
+----------------------------------------------------------------------
+Report for cell async_fifo.v1
+Instance Path : i_fifo
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1           50.0
+                                FA2        10           10.8
+                            FD1P3XZ        88           19.2
+                               LUT4        66           27.7
+                              TOTAL       165
+----------------------------------------------------------------------
+Report for cell mixer.v1
+Instance Path : i_mixer
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        36           38.7
+                            FD1P3XZ        91           19.8
+                               LUT4        60           25.2
+                              MAC16         4          100.0
+                              TOTAL       191
+----------------------------------------------------------------------
+Report for cell fir_filter.v1
+Instance Path : i_filter
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1           50.0
+                                FA2        39           41.9
+                            FD1P3XZ       154           33.6
+                               LUT4        55           23.1
+                              TOTAL       249
+----------------------------------------------------------------------
+Report for cell spi_ctrl.v1
+Instance Path : i_mixer_ctrl
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        21            4.6
+                              IOL_B         1           16.7
+                               LUT4         7            2.9
+                              TOTAL        29

@@ -1,0 +1,1 @@
+C:/lscc/radiant/2024.2/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.testbench_ledlogic(fast) -quiet -auto_acc_if_foreign -work work +acc -L iCE40UP -allow_unnamed -o _opt2 -id 2-00be43e56ed7-68c4c137-183-4ee4 +__design_bin_path+C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test +__betafsm

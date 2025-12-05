@@ -1,0 +1,9 @@
+-w
+-gui
+-msgset "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/promote.xml"
+-n 1
+-t 1
+-s 1
+-cores 1
+-hsp m
+-exp parPathBased=ON

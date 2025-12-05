@@ -1,0 +1,10 @@
+#Start recording tcl command: 9/4/2025 19:55:19
+#Project Location: C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/dev_board_test.rdf"
+prj_run PAR -impl impl_1
+prj_disable_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/source/impl_1/testbench.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/COJEDADESILVA/Downloads/fpga_dev_board_test/fpga_dev_board_test/sim/sim.spf"
+prj_run Export -impl impl_1
+#Stop recording: 9/4/2025 21:30:15

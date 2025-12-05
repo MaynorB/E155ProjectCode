@@ -1,0 +1,44 @@
+#Start recording tcl command: 12/4/2025 03:44:02
+#Project Location: C:/Users/cojedadesilva/Downloads/fpga_dev_board_test; Project name: dev_board_test
+prj_open "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/dev_board_test.rdf"
+prj_add_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/top_tb.v"
+prj_disable_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/top_tb.v"
+prj_add_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/spi_receiver_tb.ldc"
+prj_remove_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/spi_receiver_tb.ldc"
+prj_add_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/spi_receiver_tb.sv"
+prj_disable_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/spi_receiver_tb.sv"
+prj_add_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/async_fifo_tb.sv"
+prj_disable_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/async_fifo_tb.sv"
+prj_add_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/rate_synchronizer_tb.sv"
+prj_disable_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/rate_synchronizer_tb.sv"
+prj_remove_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/top_tb.v"
+prj_add_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/top_tb.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_disable_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/top_tb.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/I2S_player_tb.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_disable_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/I2S_player_tb.sv"
+prj_add_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/fir_filter_tb.sv"
+prj_disable_source "C:/Users/cojedadesilva/Downloads/fpga_dev_board_test/source/impl_1/fir_filter_tb.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 12/4/2025 07:50:04

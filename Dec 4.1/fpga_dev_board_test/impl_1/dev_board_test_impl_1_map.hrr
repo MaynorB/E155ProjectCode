@@ -1,0 +1,95 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       6.00        100.0
+                                  LUT4	        693        100.0
+                               LUTGATE	        507        100.0
+                                LUTCCU	        186        100.0
+                                 IOREG	          6        100.0
+                                 IOBUF	          8        100.0
+                                PFUREG	        459        100.0
+                                   EBR	          2        100.0
+                                   DSP	          4        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                            async_fifo	          1        12.4
+                            fir_filter	          1        19.2
+                            i2s_player	          1         6.5
+                                 mixer	          1        18.9
+                     rate_synchronizer	          1         1.7
+                              spi_ctrl	          1         1.0
+                          spi_receiver	          1         1.2
+---------------------------------------------------
+Report for cell rate_synchronizer
+   Instance path: top/i_sync
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       1.00        16.7
+                                  LUT4	         12         1.7
+                               LUTGATE	          4         0.8
+                                LUTCCU	          8         4.3
+                                 IOREG	          1        16.7
+                                PFUREG	         28         6.1
+---------------------------------------------------
+Report for cell spi_receiver
+   Instance path: top/i_spi
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       3.00        50.0
+                                  LUT4	          8         1.2
+                               LUTGATE	          8         1.6
+                                 IOREG	          3        50.0
+                                PFUREG	         37         8.1
+---------------------------------------------------
+Report for cell i2s_player
+   Instance path: top/i_player
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       1.00        16.7
+                                  LUT4	         45         6.5
+                               LUTGATE	         37         7.3
+                                LUTCCU	          8         4.3
+                                 IOREG	          1        16.7
+                                PFUREG	         40         8.7
+---------------------------------------------------
+Report for cell async_fifo
+   Instance path: top/i_fifo
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         86        12.4
+                               LUTGATE	         66        13.0
+                                LUTCCU	         20        10.8
+                                PFUREG	         88        19.2
+                                   EBR	          1        50.0
+---------------------------------------------------
+Report for cell mixer
+   Instance path: top/i_mixer
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        131        18.9
+                               LUTGATE	         59        11.6
+                                LUTCCU	         72        38.7
+                                PFUREG	         91        19.8
+                                   DSP	          4        100.0
+---------------------------------------------------
+Report for cell fir_filter
+   Instance path: top/i_filter
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        133        19.2
+                               LUTGATE	         55        10.8
+                                LUTCCU	         78        41.9
+                                PFUREG	        154        33.6
+                                   EBR	          1        50.0
+---------------------------------------------------
+Report for cell spi_ctrl
+   Instance path: top/i_mixer_ctrl
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       1.00        16.7
+                                  LUT4	          7         1.0
+                               LUTGATE	          7         1.4
+                                 IOREG	          1        16.7
+                                PFUREG	         21         4.6
